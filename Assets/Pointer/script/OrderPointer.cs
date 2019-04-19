@@ -18,6 +18,17 @@ public class OrderPointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //右スティックの値を取得
+        float x = Input.GetAxis("RightHorizontal");
+        float y = Input.GetAxis("RightVertical") * -1.0f;
+        if (x != 0 || y != 0)
+        {
+            //移動
+            transform.position += new Vector3(x * MoveSpeed / 50, 0, y * MoveSpeed / 50);
+            //向き
+        }
+
+
         PlayerPos = PlayerPointer.transform.position;
         //両座標で距離を取得10を越えれば移動できない
         Distance = Vector3.Distance(transform.position, PlayerPos);

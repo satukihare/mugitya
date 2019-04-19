@@ -19,7 +19,7 @@ public class Switch : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Bug")
+        if (other.gameObject.tag == "Item")
         {
             Destroy(block);
         }

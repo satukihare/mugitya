@@ -22,7 +22,7 @@ public class BeCatch : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if(Becatch==false)
         {
