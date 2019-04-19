@@ -7,33 +7,73 @@ public class OrderPointer : MonoBehaviour
     [SerializeField] GameObject PlayerPointer;
     private Vector3 PlayerPos;              //プレイヤー座標
     private Vector3 Velocity;              // 移動方向
-    private float MoveSpeed = 5.0f;        // 移動速度
+    private float MoveSpeed = 10.0f;        // 移動速度
     private float Distance;                // プレイヤー座標とポインタ座標の距離
+    private PlayerScript Playerscript;
+    Rigidbody rb;
+    public Vector3 PointercameraForward;
+    public Vector3 PointermoveForward;
+    float RightStickX;
+    float RightStickY;
+
     // Use this for initialization
     void Start()
     {
-
+        Playerscript = PlayerPointer.GetComponent<PlayerScript>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //右スティックの値を取得
-        float x = Input.GetAxis("RightHorizontal");
-        float y = Input.GetAxis("RightVertical") * -1.0f;
-        if (x != 0 || y != 0)
-        {
-            //移動
-            transform.position += new Vector3(x * MoveSpeed / 50, 0, y * MoveSpeed / 50);
-            //向き
-        }
-
+        RightStickX = Input.GetAxis("RightHorizontal");
+        RightStickY = Input.GetAxis("RightVertical") * -1.0f;
 
         PlayerPos = PlayerPointer.transform.position;
         //両座標で距離を取得10を越えれば移動できない
         Distance = Vector3.Distance(transform.position, PlayerPos);
+
+        KeyBoardInput();
+
+        //両者間距離が10超えたら一歩手前に戻す
+        //DistanceCheck();
+    }
+
+    private void FixedUpdate()
+    {
+        // カメラの方向から、X-Z平面の単位ベクトルを取得
+        PointercameraForward = Playerscript.cameraForward;
+
+        // 方向キーの入力値とカメラの向きから、移動方向を決定
+        PointermoveForward = PointercameraForward * RightStickY + Camera.main.transform.right * RightStickX;
+
+        // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
+        rb.velocity = PointermoveForward * MoveSpeed + new Vector3(0, rb.velocity.y, 0);
+
+        // キャラクターの向きを進行方向に
+        if (PointermoveForward != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(-PointermoveForward);
+        }
+    }
+
+   // void DistanceCheck()
+   // {
+   //     PlayerPos = PlayerPointer.transform.position;
+   //     //両座標で距離を取得10を越えれば移動できない
+   //     Distance = Vector3.Distance(transform.position, PlayerPos);
+   //     if (Distance > 15.0f)
+   //     {
+   //         //プレイヤーの移動更新
+   //         transform.position -= Velocity;
+   //     }
+   // }
+
+    void KeyBoardInput()
+    {
         Velocity = Vector3.zero;
-        if (Distance<15.0f)
+        if (Distance < 15.0f)
         {
             // ↑↓→←入力から、XZ平面(水平な地面)を移動する方向(Velocity)を得ます
             if (Input.GetKey(KeyCode.UpArrow))
@@ -62,22 +102,7 @@ public class OrderPointer : MonoBehaviour
         {
             //プレイヤーの移動更新
             transform.position += Velocity;
-            
-        }
 
-        //両者間距離が10超えたら一歩手前に戻す
-        DistanceCheck();
-    }
-
-    void DistanceCheck()
-    {
-        PlayerPos = PlayerPointer.transform.position;
-        //両座標で距離を取得10を越えれば移動できない
-        Distance = Vector3.Distance(transform.position, PlayerPos);
-        if (Distance > 15.0f)
-        {
-            //プレイヤーの移動更新
-            transform.position -= Velocity;
         }
     }
 

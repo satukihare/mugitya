@@ -34,11 +34,11 @@ public class playercamera : MonoBehaviour {
         // カメラの位置(transform.position)の更新
         transform.position = Player.position + new Vector3(0, 2, 0) - transform.rotation * Vector3.forward * distance;
 
-        if (playerScript.Is_OnL1)
+        if (playerScript.Is_OnR1 || Input.GetKey(KeyCode.Q))
         {
             angleH += 1 * rotSpeed * Time.deltaTime;
         }
-        if (playerScript.Is_OnR1)
+        if (playerScript.Is_OnL1 || Input.GetKey(KeyCode.E))
         {
             angleH -= 1 * rotSpeed * Time.deltaTime;
         }

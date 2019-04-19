@@ -16,11 +16,17 @@ public class PlayerScript : MonoBehaviour {
     public float LeftStickY;                                    // 左スティックY値
     public float RightStickX;                                   // 右スティックX値
     public float RightStickY;                                   // 右スティックY値
+    Rigidbody rb;
+    public Vector3 cameraForward;
+    public Vector3 moveForward;
+
+
 
     // Use this for initialization
     void Start () {
         Life = 5;
-	}
+        rb = GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,6 +35,31 @@ public class PlayerScript : MonoBehaviour {
         PadInput();
 
         KeyBoardInput();
+
+        //ゲームパッド移動
+        //左スティックの値を取得
+        LeftStickX = Input.GetAxis("Horizontal");
+        LeftStickY = Input.GetAxis("Vertical") * -1.0f;
+        RightStickX = Input.GetAxis("RightHorizontal");
+        RightStickY = Input.GetAxis("RightVertical") * -1.0f;
+    }
+
+    private void FixedUpdate()
+    {
+        // カメラの方向から、X-Z平面の単位ベクトルを取得
+        cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+ 
+        // 方向キーの入力値とカメラの向きから、移動方向を決定
+        moveForward = cameraForward * LeftStickY + Camera.main.transform.right * LeftStickX;
+ 
+        // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
+        rb.velocity = moveForward * MoveSpeed + new Vector3(0, rb.velocity.y, 0);
+ 
+        // キャラクターの向きを進行方向に
+        if (moveForward != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(-moveForward);
+        }
 
     }
 
@@ -56,21 +87,7 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetButton("Square")){}
         if (Input.GetButton("Triangle")){}
         if (Input.GetButton("Circle")){}
-        //ゲームパッド移動
-        //左スティックの値を取得
-        LeftStickX = Input.GetAxis("Horizontal");
-        LeftStickY = Input.GetAxis("Vertical") * -1.0f;
-        RightStickX = Input.GetAxis("RightHorizontal");
-        RightStickY = Input.GetAxis("RightVertical") * -1.0f;
-
-        if (LeftStickX != 0 || LeftStickY != 0)
-        {
-            //移動
-            transform.position += new Vector3(LeftStickX * MoveSpeed / 100, 0, LeftStickY * MoveSpeed / 100);
-            //向き
-            var direction = new Vector3(-LeftStickX * RotationSpeed / 100, 0, -LeftStickY * RotationSpeed / 100);
-            transform.localRotation = Quaternion.LookRotation(direction);
-        }
+        
     }
 
     void KeyBoardInput()

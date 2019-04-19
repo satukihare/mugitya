@@ -7,6 +7,7 @@ TagManager:
   - Item
   - Bug
   - Enemy
+  - Pointer
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Bug
   - Item
   - Enemy
-  - 
+  - Pointer
   - 
   - 
   - 
