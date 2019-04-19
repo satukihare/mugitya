@@ -1,0 +1,11 @@
+#visual studioのソリューションファイルは除外
+*.sln
+#visual studioのキャッシュフォルダ？も除外
+.vs/
+#実行ファイルもいらない
+*.exe
+#シェーダのキャッシュも不要
+ShaderCache/
+
+#以下管理不要なasset
+aura/
