@@ -69,6 +69,7 @@
     <Compile Include="Assets\Player\script\LifeCounter.cs" />
     <Compile Include="Assets\Player\script\PlayerScript.cs" />
     <Compile Include="Assets\Pointer\script\OrderPointer.cs" />
+    <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
     <Compile Include="Assets\script\BeCatch.cs" />
     <Compile Include="Assets\script\BugMoving.cs" />
     <Compile Include="Assets\script\FollewPlayer.cs" />
