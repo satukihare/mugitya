@@ -6,38 +6,48 @@ public class OrderPointer : MonoBehaviour
 {
     [SerializeField] GameObject PlayerPointer;
     private Vector3 PlayerPos;              //プレイヤー座標
-    private Vector3 Velocity;              // 移動方向
+    private Vector3 Velocity;               // 移動方向
     private float MoveSpeed = 10.0f;        // 移動速度
-    private float Distance;                // プレイヤー座標とポインタ座標の距離
+    private float Distance;                 // プレイヤー座標とポインタ座標の距離
     private PlayerScript Playerscript;
-    Rigidbody rb;
-    public Vector3 PointercameraForward;
-    public Vector3 PointermoveForward;
-    float RightStickX;
-    float RightStickY;
+    Rigidbody rb;                           //ポインターのRigibody
+    public Vector3 PointercameraForward;    //カメラの向きに合わせてポインターを動かすために、カメラの向きの保存用
+    public Vector3 PointermoveForward;      //カメラの向きに合わせてポインターを動かすために、カメラの向きの保存用
+    float RightStickX;                      //RスティックX値
+    float RightStickY;                      //RスティックY値
+    bool IsPointerMoved;                    //ポインターを使っているか？
 
     // Use this for initialization
     void Start()
     {
         Playerscript = PlayerPointer.GetComponent<PlayerScript>();
         rb = GetComponent<Rigidbody>();
+        IsPointerMoved = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        PlayerPos = PlayerPointer.transform.position;
         //右スティックの値を取得
         RightStickX = Input.GetAxis("RightHorizontal");
         RightStickY = Input.GetAxis("RightVertical") * -1.0f;
-
-        PlayerPos = PlayerPointer.transform.position;
-        //両座標で距離を取得10を越えれば移動できない
-        Distance = Vector3.Distance(transform.position, PlayerPos);
-
+        //Rスティックの値でポインター使っているかを判断
+        //上下左右の値全部0ならfalse
+        //上下左右の値全部0じゃない場合はtrue
+        if (RightStickX == 0 && RightStickY == 0) { IsPointerMoved = false; } //gameObject.SetActive(false); }
+        if (RightStickX != 0 || RightStickY != 0){IsPointerMoved = true; } //gameObject.SetActive(true); }
+        //ポインターを表示するかを判断
+        if (IsPointerMoved == false)
+        {
+            this.transform.position = new Vector3(PlayerPos.x, this.transform.position.y, PlayerPos.z);
+        }
+        if (IsPointerMoved == true)
+        {
+            
+        }
+        
         KeyBoardInput();
-
-        //両者間距離が10超えたら一歩手前に戻す
-        //DistanceCheck();
     }
 
     private void FixedUpdate()
