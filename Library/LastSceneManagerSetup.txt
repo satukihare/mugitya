@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/Aura/Examples/Spot Light/Spot Light Example.unity
   isLoaded: 1
   isActive: 1
