@@ -18,7 +18,7 @@ public class FadeManager:MonoBehaviour{
     public static bool isFadeOut = false;
 
     //フェードしたい時間（単位は秒）
-    private static float fadeTime = 10.0f;
+    private static float fadeTime = 3.0f;
 
     //遷移先のシーン番号
     private static int nextScene = 1;
@@ -63,7 +63,7 @@ public class FadeManager:MonoBehaviour{
         isFadeOut = true;
     }
 
-    void Update()
+    public void Update()
     {
         //フラグ有効なら毎フレームフェードイン/アウト処理
         if (isFadeIn)
@@ -94,7 +94,7 @@ public class FadeManager:MonoBehaviour{
                 alpha = 1.0f;
 
                 //次のシーンへ遷移
-                //SceneManager.LoadScene(nextScene);
+                SceneManager.LoadScene(nextScene);
             }
 
             //フェード用Imageの透明度設定

@@ -36,12 +36,7 @@ public class PlayerScript : MonoBehaviour {
 
         KeyBoardInput();
 
-        //ゲームパッド移動
-        //左スティックの値を取得
-        LeftStickX = Input.GetAxis("Horizontal");
-        LeftStickY = Input.GetAxis("Vertical") * -1.0f;
-        RightStickX = Input.GetAxis("RightHorizontal");
-        RightStickY = Input.GetAxis("RightVertical") * -1.0f;
+        
     }
 
     private void FixedUpdate()
@@ -79,6 +74,15 @@ public class PlayerScript : MonoBehaviour {
 
     void PadInput()
     {
+        //ゲームパッド移動
+        //左スティックの値を取得
+        LeftStickX = Input.GetAxis("Horizontal");
+        LeftStickY = Input.GetAxis("Vertical") * -1.0f;
+        RightStickX = Input.GetAxis("RightHorizontal");
+        RightStickY = Input.GetAxis("RightVertical") * -1.0f;
+        float DirectionKeyX= Input.GetAxis("LeftRight");
+        float DirectionKeyY= Input.GetAxis("UpDown");
+
         if (Input.GetButton("L1")){ Is_OnL1 = true; } if (Input.GetButtonUp("L1")) { Is_OnL1 = false; }
         if (Input.GetButton("L2")){ Is_OnL2 = true; } if (Input.GetButtonUp("L2")) { Is_OnL2 = false; }
         if (Input.GetButton("R1")){ Is_OnR1 = true; } if (Input.GetButtonUp("R1")) { Is_OnR1 = false; }
@@ -87,7 +91,10 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetButton("Square")){}
         if (Input.GetButton("Triangle")){}
         if (Input.GetButton("Circle")){}
-        
+        if (DirectionKeyX == -1) { Debug.Log("Left"); }
+        if (DirectionKeyX == 1)  { Debug.Log("Right"); }
+        if (DirectionKeyY == -1) { Debug.Log("Down");}
+        if (DirectionKeyY == 1)  { Debug.Log("Up"); }
     }
 
     void KeyBoardInput()

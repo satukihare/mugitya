@@ -55,9 +55,8 @@ public class IconScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Circle"))
             {
-                FadeManager.FadeIn();
-                SceneManager.LoadScene("Game");
-                
+                //FadeManager.FadeIn();
+                FadeManager.FadeOut(1);  
             }
         }
 
