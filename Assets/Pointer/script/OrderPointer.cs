@@ -9,7 +9,7 @@ public class OrderPointer : MonoBehaviour
     private Vector3 Velocity;               // 移動方向
     private float MoveSpeed = 10.0f;        // 移動速度
     private float Distance;                 // プレイヤー座標とポインタ座標の距離
-    private PlayerScript Playerscript;
+    private move Playerscript;
     Rigidbody rb;                           //ポインターのRigibody
     public Vector3 PointercameraForward;    //カメラの向きに合わせてポインターを動かすために、カメラの向きの保存用
     public Vector3 PointermoveForward;      //カメラの向きに合わせてポインターを動かすために、カメラの向きの保存用
@@ -20,7 +20,7 @@ public class OrderPointer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Playerscript = PlayerPointer.GetComponent<PlayerScript>();
+        Playerscript = PlayerPointer.GetComponent<move>();
         rb = GetComponent<Rigidbody>();
         IsPointerMoved = false;
     }
@@ -46,8 +46,6 @@ public class OrderPointer : MonoBehaviour
         {
             
         }
-        
-        KeyBoardInput();
     }
 
     private void FixedUpdate()
@@ -57,7 +55,7 @@ public class OrderPointer : MonoBehaviour
 
         // 方向キーの入力値とカメラの向きから、移動方向を決定
         PointermoveForward = PointercameraForward * RightStickY + Camera.main.transform.right * RightStickX;
-
+        Debug.Log(PointermoveForward);
         // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
         rb.velocity = PointermoveForward * MoveSpeed + new Vector3(0, rb.velocity.y, 0);
 
@@ -65,54 +63,6 @@ public class OrderPointer : MonoBehaviour
         if (PointermoveForward != Vector3.zero)
         {
             transform.rotation = Quaternion.LookRotation(-PointermoveForward);
-        }
-    }
-
-   // void DistanceCheck()
-   // {
-   //     PlayerPos = PlayerPointer.transform.position;
-   //     //両座標で距離を取得10を越えれば移動できない
-   //     Distance = Vector3.Distance(transform.position, PlayerPos);
-   //     if (Distance > 15.0f)
-   //     {
-   //         //プレイヤーの移動更新
-   //         transform.position -= Velocity;
-   //     }
-   // }
-
-    void KeyBoardInput()
-    {
-        Velocity = Vector3.zero;
-        if (Distance < 15.0f)
-        {
-            // ↑↓→←入力から、XZ平面(水平な地面)を移動する方向(Velocity)を得ます
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                Velocity.z += 2;
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                Velocity.z -= 2;
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                Velocity.x -= 2;
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                Velocity.x += 2;
-            }
-        }
-
-        // 速度ベクトルの長さを1秒でMoveSpeedだけ進むように調整します
-        Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime * 2;
-
-        // いずれかの方向に移動している場合
-        if (Velocity.magnitude > 0)
-        {
-            //プレイヤーの移動更新
-            transform.position += Velocity;
-
         }
     }
 

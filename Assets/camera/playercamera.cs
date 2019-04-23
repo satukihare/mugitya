@@ -20,7 +20,7 @@ public class playercamera : MonoBehaviour {
     void Start()
     {
         // 回転の初期化
-        vRotation = Quaternion.Euler(30, 0, 0);         // 垂直回転(X軸を軸とする回転)は、30度見下ろす回転
+        vRotation = Quaternion.Euler(0, 0, 0);         // 垂直回転(X軸を軸とする回転)は、30度見下ろす回転
         hRotation = Quaternion.identity;                // 水平回転(Y軸を軸とする回転)は、無回転
         transform.rotation = hRotation * vRotation;     // 最終的なカメラの回転は、垂直回転してから水平回転する合成回転
         playerScript = Player.GetComponent<PlayerScript>();
@@ -43,7 +43,7 @@ public class playercamera : MonoBehaviour {
             angleH -= 1 * rotSpeed * Time.deltaTime;
         }
         
-        Vector3 rotDir = Quaternion.Euler(30, angleH, 0f) * Vector3.back;
+        Vector3 rotDir = Quaternion.Euler(30.0f, angleH, 0.0f) * Vector3.back;
         transform.position = Player.position + distance * rotDir;
 
         transform.LookAt(Player.position);

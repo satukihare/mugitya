@@ -16,7 +16,7 @@ public class MovetoOrderPosition : MonoBehaviour
     private float PlayerDistance;                   //プレイヤーとの距離保存変数
     [SerializeField] private float AttractSize = 7;     // 香りに反応する距離
 
-    public PlayerScript playerScript;                   //プレイヤースクリプト取得
+    public move playerScript;                   //プレイヤースクリプト取得
 
     Rigidbody m_Rigidbody;
 
@@ -26,7 +26,7 @@ public class MovetoOrderPosition : MonoBehaviour
         //Rigidbodyのpositionとrotationを固定、解除する用
         Player = GameObject.Find("Player");
         OrderPointer = GameObject.Find("Pointer");
-        playerScript = Player.GetComponent<PlayerScript>();
+        playerScript = Player.GetComponent<move>();
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
     }
