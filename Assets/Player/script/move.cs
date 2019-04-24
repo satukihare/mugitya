@@ -58,22 +58,32 @@ public class move : MonoBehaviour
         }
         if (Input.GetButton("L1")) { Is_OnL1 = true; }
         if (Input.GetButtonUp("L1")) { Is_OnL1 = false; }
-        if (Input.GetButton("L2")) { Is_OnL2 = true; }
-        if (Input.GetButtonUp("L2")) { Is_OnL2 = false; }
+        if (Input.GetButton("L2")   || Input.GetAxis("Box_Trigger") ==-1.0f) { Is_OnL2 = true; }
+        if (Input.GetButtonUp("L2") || Input.GetAxis("Box_Trigger") > -1.0f) { Is_OnL2 = false; }
         if (Input.GetButton("R1")) { Is_OnR1 = true; }
         if (Input.GetButtonUp("R1")) { Is_OnR1 = false; }
-        if (Input.GetButton("R2")) { Is_OnR2 = true; }
-        if (Input.GetButtonUp("R2")) { Is_OnR2 = false; }
-        if (Input.GetButton("Cross")) { }
-        if (Input.GetButton("Square")) { }
-        if (Input.GetButton("Triangle")) { }
-        if (Input.GetButton("Circle")) { }
-        DirectionKeyX = Input.GetAxis("LeftRight");
-        DirectionKeyY = Input.GetAxis("UpDown");
-        if (DirectionKeyX == -1) { Debug.Log("Left"); }
-        if (DirectionKeyX == 1) { Debug.Log("Right"); }
-        if (DirectionKeyY == -1) { Debug.Log("Down"); }
-        if (DirectionKeyY == 1) { Debug.Log("Up"); }
+        if (Input.GetButton("R2")   || Input.GetAxis("Box_Trigger") == 1.0f) { Is_OnR2 = true; }
+        if (Input.GetButtonUp("R2") || Input.GetAxis("Box_Trigger") <  1.0f) { Is_OnR2 = false; }
+        if (Input.GetButton("A") ||Input.GetButton("Cross"))    { Debug.Log("A"); }
+        if (Input.GetButton("X") ||Input.GetButton("Square"))   { Debug.Log("X"); }
+        if (Input.GetButton("Y") ||Input.GetButton("Triangle")) { Debug.Log("Y"); }
+        if (Input.GetButton("B") || Input.GetButton("Circle"))  { Debug.Log("B"); }
+
+        //float tri = Input.GetAxis("Box_Trigger");
+        //if (tri > 0)
+        //{
+        //    Debug.Log("L trigger:" + tri);
+        //}
+        //else if (tri < 0)
+        //{
+        //    Debug.Log("R trigger:" + tri);
+        //}
+        //DirectionKeyX = Input.GetAxis("LeftRight");
+        //DirectionKeyY = Input.GetAxis("UpDown");
+        if (Input.GetAxis("BoxDirectionKeyX") ==-1 || Input.GetAxis("LeftRight")==-1) { Debug.Log("Left"); }
+        if (Input.GetAxis("BoxDirectionKeyX") == 1 || Input.GetAxis("LeftRight")== 1) { Debug.Log("Right"); }
+        if (Input.GetAxis("BoxDirectionKeyY") ==-1 || Input.GetAxis("UpDown") ==-1) { Debug.Log("Down"); }
+        if (Input.GetAxis("BoxDirectionKeyY") == 1 || Input.GetAxis("UpDown") == 1) { Debug.Log("Up"); }
     }
 
     void Transform()

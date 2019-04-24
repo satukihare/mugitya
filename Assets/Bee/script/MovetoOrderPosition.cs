@@ -52,13 +52,18 @@ public class MovetoOrderPosition : MonoBehaviour
             if (this.IsOrder == false)
             {
                 //プレイヤーとの間3.0fの距離を保つため
-                if (PlayerDistance >= 3.0f)
+                if (PlayerDistance > 3.0f)
                 {
                     //プレイヤー座標の方に少しずつ向きが変わる
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(PlayerDes - transform.position), 0.1f);
 
                     //プレイヤーの居場所に向かって進む
                     transform.position += transform.forward * Speed;
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                }
+                if (PlayerDistance <= 3.0f)
+                {
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 }
             }
             //命令されたら
@@ -82,8 +87,8 @@ public class MovetoOrderPosition : MonoBehaviour
             if (Distance < 1.0f)
             {
                 this.IsOrder = false;
-                this.IsFollowPlayer = false;
-                m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                this.IsFollowPlayer = true;
+                //m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
     }

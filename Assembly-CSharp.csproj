@@ -63,6 +63,7 @@
     <Compile Include="Assets\Bee\script\MovetoOrderPosition.cs" />
     <Compile Include="Assets\camera\cameramove.cs" />
     <Compile Include="Assets\Enemy\Script\EnemyMove.cs" />
+    <Compile Include="Assets\Enemy\Script\EnemyStatus.cs" />
     <Compile Include="Assets\Field\script\Switch.cs" />
     <Compile Include="Assets\Item\script\BeCatch.cs" />
     <Compile Include="Assets\Item\script\BugMoving.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Pointer\script\OrderPointer.cs" />
     <Compile Include="Assets\Scenes\FadeManager\FadeManager.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
+    <Compile Include="Assets\UI\Script\HPStatusUI.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/ginta/Documents/mugitya/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
