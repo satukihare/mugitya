@@ -128,6 +128,8 @@
     <Compile Include="Assets\camera\playercamera.cs" />
     <Compile Include="Assets\Enemy\Script\EnemyMove.cs" />
     <Compile Include="Assets\Field\script\Switch.cs" />
+    <Compile Include="Assets\GUI\script\lifeGUIControl.cs" />
+    <Compile Include="Assets\GUI\script\lifeLeaf.cs" />
     <Compile Include="Assets\Player\script\AreaViewer.cs" />
     <Compile Include="Assets\Player\script\AreaVisualizer.cs" />
     <Compile Include="Assets\Player\script\LifeCounter.cs" />
