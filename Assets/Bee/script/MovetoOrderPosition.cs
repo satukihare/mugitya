@@ -15,7 +15,7 @@ public class MovetoOrderPosition : MonoBehaviour
     private float Distance;                         //ポインタとの距離保存変数
     private float PlayerDistance;                   //プレイヤーとの距離保存変数
     [SerializeField] private float AttractSize = 7;     // 香りに反応する距離
-
+    private GamePad gamepad;
     public move playerScript;                   //プレイヤースクリプト取得
 
     Rigidbody m_Rigidbody;
@@ -28,6 +28,7 @@ public class MovetoOrderPosition : MonoBehaviour
         OrderPointer = GameObject.Find("Pointer");
         playerScript = Player.GetComponent<move>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        gamepad = Player.GetComponent<GamePad>();
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
     }
 
@@ -67,7 +68,7 @@ public class MovetoOrderPosition : MonoBehaviour
                 }
             }
             //命令されたら
-            if (Input.GetKeyDown(KeyCode.Space) ||  playerScript.Is_OnR2)
+            if (Input.GetKeyDown(KeyCode.Space) ||  gamepad.GetR2())
             {
                 this.IsOrder = true;
                 this.IsFollowPlayer = false;

@@ -10,21 +10,17 @@ public class move : MonoBehaviour
     [SerializeField] private cameramove RefCamera;  // カメラの水平回転を参照する用
     public float LeftStickX;                                    // 左スティックX値
     public float LeftStickY;                                    // 左スティックY値
-    float DirectionKeyX;
-    float DirectionKeyY;
     Rigidbody rb;
-    public bool Is_OnL1;                                        // ON/OFF判定
-    public bool Is_OnL2;                                        // ON/OFF判定
-    public bool Is_OnR1;                                        // ON/OFF判定
-    public bool Is_OnR2;                                        // ON/OFF判定
 
     public Vector3 cameraForward;
     public Vector3 moveForward;
+    private GamePad gamepad;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         RefCamera = GameObject.Find("Main Camera").GetComponent<cameramove>();
+        gamepad = GetComponent<GamePad>();
     }
 
     void Update()
@@ -37,8 +33,8 @@ public class move : MonoBehaviour
 
     void GamePadInput()
     {
-        LeftStickX = Input.GetAxisRaw("Horizontal");
-        LeftStickY = Input.GetAxisRaw("Vertical") * -1.0f;
+        LeftStickX = gamepad.GetLeftStickX();
+        LeftStickY = gamepad.GetLeftStickY();
         Velocity = Vector3.zero;
         if (LeftStickX > 0)
         {
@@ -56,34 +52,15 @@ public class move : MonoBehaviour
         {
             Velocity.z += LeftStickY;
         }
-        if (Input.GetButton("L1")) { Is_OnL1 = true; }
-        if (Input.GetButtonUp("L1")) { Is_OnL1 = false; }
-        if (Input.GetButton("L2")   || Input.GetAxis("Box_Trigger") ==-1.0f) { Is_OnL2 = true; }
-        if (Input.GetButtonUp("L2") || Input.GetAxis("Box_Trigger") > -1.0f) { Is_OnL2 = false; }
-        if (Input.GetButton("R1")) { Is_OnR1 = true; }
-        if (Input.GetButtonUp("R1")) { Is_OnR1 = false; }
-        if (Input.GetButton("R2")   || Input.GetAxis("Box_Trigger") == 1.0f) { Is_OnR2 = true; }
-        if (Input.GetButtonUp("R2") || Input.GetAxis("Box_Trigger") <  1.0f) { Is_OnR2 = false; }
-        if (Input.GetButton("A") ||Input.GetButton("Cross"))    { Debug.Log("A"); }
-        if (Input.GetButton("X") ||Input.GetButton("Square"))   { Debug.Log("X"); }
-        if (Input.GetButton("Y") ||Input.GetButton("Triangle")) { Debug.Log("Y"); }
-        if (Input.GetButton("B") || Input.GetButton("Circle"))  { Debug.Log("B"); }
-
-        //float tri = Input.GetAxis("Box_Trigger");
-        //if (tri > 0)
-        //{
-        //    Debug.Log("L trigger:" + tri);
-        //}
-        //else if (tri < 0)
-        //{
-        //    Debug.Log("R trigger:" + tri);
-        //}
-        //DirectionKeyX = Input.GetAxis("LeftRight");
-        //DirectionKeyY = Input.GetAxis("UpDown");
-        if (Input.GetAxis("BoxDirectionKeyX") ==-1 || Input.GetAxis("LeftRight")==-1) { Debug.Log("Left"); }
-        if (Input.GetAxis("BoxDirectionKeyX") == 1 || Input.GetAxis("LeftRight")== 1) { Debug.Log("Right"); }
-        if (Input.GetAxis("BoxDirectionKeyY") ==-1 || Input.GetAxis("UpDown") ==-1) { Debug.Log("Down"); }
-        if (Input.GetAxis("BoxDirectionKeyY") == 1 || Input.GetAxis("UpDown") == 1) { Debug.Log("Up"); }
+        //入力検証
+        if (gamepad.GetCross()) { Debug.Log("Cross is be Pushed"); }
+        if (gamepad.GetCircle()) { Debug.Log("Circle is be Pushed"); }
+        if (gamepad.GetSquare()) { Debug.Log("Square is be Pushed"); }
+        if (gamepad.GetTriangle()) { Debug.Log("Triangle is be Pushed"); }
+        if (gamepad.GetDirectionKeyX()==-1) { Debug.Log("Left"); }
+        if (gamepad.GetDirectionKeyX()== 1) { Debug.Log("Right"); }
+        if (gamepad.GetDirectionKeyY()==-1) { Debug.Log("Down"); }
+        if (gamepad.GetDirectionKeyY()== 1) { Debug.Log("Up"); }
     }
 
     void Transform()
@@ -103,30 +80,5 @@ public class move : MonoBehaviour
             // カメラの水平回転(RefCamera.hRotation)で回した移動方向(Velocity)を足し込みます
             transform.position += RefCamera.hRotation * Velocity;
         }
-    }
-
-    bool GetL1()
-    {
-        return Is_OnL1;
-    }
-    bool GetL2()
-    {
-        return Is_OnL2;
-    }
-    bool GetR1()
-    {
-        return Is_OnR1;
-    }
-    bool GetR2()
-    {
-        return Is_OnR2;
-    }
-    float GetLeftStickX()
-    {
-        return LeftStickX;
-    }
-    float GetLeftStickY()
-    {
-        return LeftStickY;
     }
 }

@@ -15,12 +15,15 @@ public class OrderPointer : MonoBehaviour
     bool IsPointerMoved;                    //ポインターを使っているか？
     float PlayerDistance;                   //プレイヤーとの距離保存変数
     private Vector3 OldPlayerPos;
+    private GamePad gamepad;
+
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         Player = GameObject.Find("Player");
         refCamera = GameObject.Find("Main Camera").GetComponent<cameramove>();
+        gamepad = Player.GetComponent<GamePad>();
         IsPointerMoved = false;
     }
 
@@ -40,9 +43,9 @@ public class OrderPointer : MonoBehaviour
     void GamepadInput()
     {
         //右スティックの値を取得
-        RightStickX = Input.GetAxis("BoxRightHorizontal");
-        RightStickY = Input.GetAxis("BoxRightVertical") * -1.0f;
-        
+        RightStickX = gamepad.GetRightStickX();
+        RightStickY = gamepad.GetRightStickY();
+
         if (RightStickX > 0)
            Velocity.x += RightStickX;
         if (RightStickX < 0)
@@ -69,10 +72,6 @@ public class OrderPointer : MonoBehaviour
     {
         PlayerDistance = Vector3.Distance(transform.position, Player.transform.position);
 
-        //if (OldPlayerPos!=Player.transform.position || Input.GetButton("R2") ||Input.GetKey(KeyCode.Space))
-        //{
-        //    IsPointerMoved = true;
-        //}
         if (PlayerDistance >= 20.0f || OldPlayerPos != Player.transform.position)
         {
             transform.position = new Vector3(Player.transform.position.x, this.transform.position.y, Player.transform.position.z);
