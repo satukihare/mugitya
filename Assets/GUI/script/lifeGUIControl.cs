@@ -48,6 +48,7 @@ public class lifeGUIControl : MonoBehaviour {
                 break;
             case 4:
                 leaf_5.NoImage();
+                this.gameObject.SetActive(false);
                 break;
             case 5:
                 break;

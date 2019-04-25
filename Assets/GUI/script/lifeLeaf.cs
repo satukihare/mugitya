@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class lifeLeaf : MonoBehaviour {
 
+    Color32 alphaZero = new Color32(0xff, 0xff, 0xff, 0x00);
+    Color32 alphaOne = new Color32(0xff, 0xff, 0xff, 0xff);
     // Start is called before the first frame update
     void Start() {
 
