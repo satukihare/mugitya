@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":778.2384033203125,"y":-146.48507690429688,"z":234.3333282470703},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":2337.62451171875,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":197.86669921875,"y":254.29212951660157,"z":29.364044189453126},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":272.91937255859377,"orthographic":true}
+>>>>>>> ゲーム内UserInterfaceの実装
