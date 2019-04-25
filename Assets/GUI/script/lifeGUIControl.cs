@@ -27,11 +27,6 @@ public class lifeGUIControl : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-
-        if (Input.GetKey(KeyCode.C))
-            player.Life--;
-
-
         switch ((int)player.Life) {
 
             case 0:
