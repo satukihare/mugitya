@@ -8,6 +8,8 @@ TagManager:
   - Bug
   - Enemy
   - Pointer
+  - Fire
+  - Yarn
   layers:
   - Default
   - TransparentFX

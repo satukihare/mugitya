@@ -9,14 +9,14 @@ public class MovetoOrderPosition : MonoBehaviour
     [SerializeField] GameObject Player;             //プレイヤーオブジェクト(命令ポインター)
     Vector3 Destination;                            //OrderPointer座標保存変数
     Vector3 PlayerDes;                              //Player座標保存変数
-    private float Speed = 0.1f;                     //移動スピード
+    private float Speed = 0.2f;                     //移動スピード
     bool IsOrder = false;                           //命令されたか
     bool IsFollowPlayer = false;                    //自由かどうか？
     private float Distance;                         //ポインタとの距離保存変数
     private float PlayerDistance;                   //プレイヤーとの距離保存変数
     [SerializeField] private float AttractSize = 7;     // 香りに反応する距離
-
-    public PlayerScript playerScript;                   //プレイヤースクリプト取得
+    private GamePad gamepad;
+    public move playerScript;                   //プレイヤースクリプト取得
 
     Rigidbody m_Rigidbody;
 
@@ -26,8 +26,9 @@ public class MovetoOrderPosition : MonoBehaviour
         //Rigidbodyのpositionとrotationを固定、解除する用
         Player = GameObject.Find("Player");
         OrderPointer = GameObject.Find("Pointer");
-        playerScript = Player.GetComponent<PlayerScript>();
+        playerScript = Player.GetComponent<move>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        gamepad = Player.GetComponent<GamePad>();
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
     }
 
@@ -52,17 +53,22 @@ public class MovetoOrderPosition : MonoBehaviour
             if (this.IsOrder == false)
             {
                 //プレイヤーとの間3.0fの距離を保つため
-                if (PlayerDistance >= 3.0f)
+                if (PlayerDistance > 3.0f)
                 {
                     //プレイヤー座標の方に少しずつ向きが変わる
                     transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(PlayerDes - transform.position), 0.1f);
 
                     //プレイヤーの居場所に向かって進む
                     transform.position += transform.forward * Speed;
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                }
+                if (PlayerDistance <= 3.0f)
+                {
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 }
             }
             //命令されたら
-            if (Input.GetKeyDown(KeyCode.Space) ||  playerScript.Is_OnR2)
+            if (Input.GetKeyDown(KeyCode.Space) ||  gamepad.GetR2())
             {
                 this.IsOrder = true;
                 this.IsFollowPlayer = false;
@@ -82,8 +88,8 @@ public class MovetoOrderPosition : MonoBehaviour
             if (Distance < 1.0f)
             {
                 this.IsOrder = false;
-                this.IsFollowPlayer = false;
-                m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                this.IsFollowPlayer = true;
+                //m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
     }

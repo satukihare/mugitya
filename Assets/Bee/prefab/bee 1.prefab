@@ -672,7 +672,7 @@ Transform:
   m_GameObject: {fileID: 7616797387121968267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.805893, y: 0, z: -16.722118}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 75, y: 75, z: 75}
   m_Children:
   - {fileID: 7616797387069034716}
   - {fileID: 7616797387100390422}
@@ -725,7 +725,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &7616797387121968265
 MonoBehaviour:
@@ -742,6 +742,7 @@ MonoBehaviour:
   OrderPointer: {fileID: 0}
   Player: {fileID: 0}
   AttractSize: 7
+  playerScript: {fileID: 0}
 --- !u!195 &7616797387121968264
 NavMeshAgent:
   m_ObjectHideFlags: 0

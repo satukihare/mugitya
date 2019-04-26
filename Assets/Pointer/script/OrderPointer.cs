@@ -4,116 +4,101 @@ using UnityEngine;
 
 public class OrderPointer : MonoBehaviour
 {
-    [SerializeField] GameObject PlayerPointer;
-    private Vector3 PlayerPos;              //プレイヤー座標
-    private Vector3 Velocity;               // 移動方向
-    private float MoveSpeed = 10.0f;        // 移動速度
-    private float Distance;                 // プレイヤー座標とポインタ座標の距離
-    private PlayerScript Playerscript;
+    [SerializeField] GameObject Player;
+    [SerializeField] private Vector3 Velocity;              // 移動方向
+    [SerializeField] private float MoveSpeed = 5.0f;        // 移動速度
+    [SerializeField] private float applySpeed = 0.2f;       // 回転の適用速度
+    [SerializeField] private cameramove refCamera;  // カメラの水平回転を参照する用
     Rigidbody rb;                           //ポインターのRigibody
-    public Vector3 PointercameraForward;    //カメラの向きに合わせてポインターを動かすために、カメラの向きの保存用
-    public Vector3 PointermoveForward;      //カメラの向きに合わせてポインターを動かすために、カメラの向きの保存用
     float RightStickX;                      //RスティックX値
     float RightStickY;                      //RスティックY値
     bool IsPointerMoved;                    //ポインターを使っているか？
+    float PlayerDistance;                   //プレイヤーとの距離保存変数
+    private Vector3 OldPlayerPos;
+    private GamePad gamepad;
 
     // Use this for initialization
     void Start()
     {
-        Playerscript = PlayerPointer.GetComponent<PlayerScript>();
         rb = GetComponent<Rigidbody>();
+        Player = GameObject.Find("Player");
+        refCamera = GameObject.Find("Main Camera").GetComponent<cameramove>();
+        gamepad = Player.GetComponent<GamePad>();
         IsPointerMoved = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerPos = PlayerPointer.transform.position;
-        //右スティックの値を取得
-        RightStickX = Input.GetAxis("RightHorizontal");
-        RightStickY = Input.GetAxis("RightVertical") * -1.0f;
-        //Rスティックの値でポインター使っているかを判断
-        //上下左右の値全部0ならfalse
-        //上下左右の値全部0じゃない場合はtrue
-        if (RightStickX == 0 && RightStickY == 0) { IsPointerMoved = false; } //gameObject.SetActive(false); }
-        if (RightStickX != 0 || RightStickY != 0){IsPointerMoved = true; } //gameObject.SetActive(true); }
-        //ポインターを表示するかを判断
-        if (IsPointerMoved == false)
-        {
-            this.transform.position = new Vector3(PlayerPos.x, this.transform.position.y, PlayerPos.z);
-        }
-        if (IsPointerMoved == true)
-        {
-            
-        }
-        
-        KeyBoardInput();
-    }
-
-    private void FixedUpdate()
-    {
-        // カメラの方向から、X-Z平面の単位ベクトルを取得
-        PointercameraForward = Playerscript.cameraForward;
-
-        // 方向キーの入力値とカメラの向きから、移動方向を決定
-        PointermoveForward = PointercameraForward * RightStickY + Camera.main.transform.right * RightStickX;
-
-        // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
-        rb.velocity = PointermoveForward * MoveSpeed + new Vector3(0, rb.velocity.y, 0);
-
-        // キャラクターの向きを進行方向に
-        if (PointermoveForward != Vector3.zero)
-        {
-            transform.rotation = Quaternion.LookRotation(-PointermoveForward);
-        }
-    }
-
-   // void DistanceCheck()
-   // {
-   //     PlayerPos = PlayerPointer.transform.position;
-   //     //両座標で距離を取得10を越えれば移動できない
-   //     Distance = Vector3.Distance(transform.position, PlayerPos);
-   //     if (Distance > 15.0f)
-   //     {
-   //         //プレイヤーの移動更新
-   //         transform.position -= Velocity;
-   //     }
-   // }
-
-    void KeyBoardInput()
-    {
         Velocity = Vector3.zero;
-        if (Distance < 15.0f)
+        IsPointerMoved = false;
+        //GamePad入力
+        GamepadInput();
+        //キーボード入力
+        KeyboardInput();
+        //移動処理
+        Translate();
+    }
+
+    void GamepadInput()
+    {
+        //右スティックの値を取得
+        RightStickX = gamepad.GetRightStickX();
+        RightStickY = gamepad.GetRightStickY();
+
+        if (RightStickX > 0)
+           Velocity.x += RightStickX;
+        if (RightStickX < 0)
+           Velocity.x += RightStickX;
+        if (RightStickY > 0)
+           Velocity.z += RightStickY;
+        if (RightStickY < 0)
+           Velocity.z += RightStickY;
+    }
+
+    void KeyboardInput()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+            Velocity.z += 1;
+        if (Input.GetKey(KeyCode.LeftArrow))
+            Velocity.x -= 1;
+        if (Input.GetKey(KeyCode.DownArrow))
+            Velocity.z -= 1;
+        if (Input.GetKey(KeyCode.RightArrow))
+            Velocity.x += 1;
+    }
+
+    void Translate()
+    {
+        PlayerDistance = Vector3.Distance(transform.position, Player.transform.position);
+
+        if (PlayerDistance >= 20.0f || OldPlayerPos != Player.transform.position)
         {
-            // ↑↓→←入力から、XZ平面(水平な地面)を移動する方向(Velocity)を得ます
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                Velocity.z += 2;
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                Velocity.z -= 2;
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                Velocity.x -= 2;
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                Velocity.x += 2;
-            }
+            transform.position = new Vector3(Player.transform.position.x, this.transform.position.y, Player.transform.position.z);
         }
-
-        // 速度ベクトルの長さを1秒でMoveSpeedだけ進むように調整します
-        Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime * 2;
-
+        // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
+        Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime;
         // いずれかの方向に移動している場合
         if (Velocity.magnitude > 0)
         {
-            //プレイヤーの移動更新
-            transform.position += Velocity;
+            // プレイヤーの回転(transform.rotation)の更新
+            // 無回転状態のプレイヤーのZ+方向(後頭部)を、
+            // カメラの水平回転(refCamera.hRotation)で回した移動の反対方向(-velocity)に回す回転に段々近づけます
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(refCamera.hRotation * Velocity), applySpeed);
 
+            // プレイヤーの位置(transform.position)の更新
+            // カメラの水平回転(refCamera.hRotation)で回した移動方向(velocity)を足し込みます
+            transform.position += refCamera.hRotation * Velocity;
         }
+
+        OldPlayerPos = Player.transform.position;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="Enemy")
+        {
+            Debug.Log(other.gameObject.name);
+        }
+    }
 }
