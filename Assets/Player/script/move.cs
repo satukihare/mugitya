@@ -11,7 +11,7 @@ public class move : MonoBehaviour
     public float LeftStickX;                                    // 左スティックX値
     public float LeftStickY;                                    // 左スティックY値
     Rigidbody rb;
-
+    
     public Vector3 cameraForward;
     public Vector3 moveForward;
     private GamePad gamepad;
@@ -25,14 +25,21 @@ public class move : MonoBehaviour
         gamepad = GetComponent<GamePad>();
         Life = 5;
         YarnHit = false;
+        //rb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     void Update()
     {
-        GamePadInput();
+        // 接続されているコントローラの名前を調べる
+        var controllerNames = Input.GetJoystickNames();
 
-        Transform();
+        // 一台もコントローラが接続されていなければエラー
+        if (controllerNames[0] != "")
+        {
+            GamePadInput();
 
+            Transform();
+        }
     }
 
     void GamePadInput()
@@ -65,6 +72,8 @@ public class move : MonoBehaviour
         if (gamepad.GetDirectionKeyX()== 1) { Debug.Log("Right"); }
         if (gamepad.GetDirectionKeyY()==-1) { Debug.Log("Down"); }
         if (gamepad.GetDirectionKeyY()== 1) { Debug.Log("Up"); }
+
+
     }
 
     void Transform()

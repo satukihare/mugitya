@@ -29,8 +29,7 @@ public class MovetoOrderPosition : MonoBehaviour
         playerScript = Player.GetComponent<move>();
         m_Rigidbody = GetComponent<Rigidbody>();
         gamepad = Player.GetComponent<GamePad>();
-        m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
-    }
+       }
 
     // Update is called once per frame
     void Update()
@@ -60,12 +59,8 @@ public class MovetoOrderPosition : MonoBehaviour
 
                     //プレイヤーの居場所に向かって進む
                     transform.position += transform.forward * Speed;
-                    m_Rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-                }
-                if (PlayerDistance <= 3.0f)
-                {
-                    m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-                }
+                    }
+
             }
             //命令されたら
             if (Input.GetKeyDown(KeyCode.Space) ||  gamepad.GetR2())
@@ -89,7 +84,6 @@ public class MovetoOrderPosition : MonoBehaviour
             {
                 this.IsOrder = false;
                 this.IsFollowPlayer = true;
-                //m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
     }

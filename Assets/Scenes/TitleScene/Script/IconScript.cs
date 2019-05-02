@@ -11,7 +11,6 @@ public class IconScript : MonoBehaviour
     float x;            //IconのX座標
     float y;            //IconのY座標
     bool b;             //移動回数の制御用
-
     // Start is called before the first frame update
     void Start()
     {

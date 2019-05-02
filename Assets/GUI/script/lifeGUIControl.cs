@@ -16,7 +16,7 @@ public class lifeGUIControl : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-
+        player = GameObject.Find("Player").GetComponent<move>();
         leaf_1.enabled = true;
         leaf_2.enabled = true;
         leaf_3.enabled = true;

@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scenes\FadeManager\FadeManager.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
+    <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
     <Compile Include="Assets\UI\Script\HPStatusUI.cs" />
     <Compile Include="Assets\Wind\Wind.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

@@ -8,13 +8,15 @@ public class KeyBoardMove : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f;        // 移動速度
     [SerializeField] private float applySpeed = 0.2f;       // 回転の適用速度
     [SerializeField] private cameramove refCamera;  // カメラの水平回転を参照する用
-
+    Rigidbody rb;
     bool YarnHit;
 
     private void Start()
     {
         refCamera = GameObject.Find("Main Camera").GetComponent<cameramove>();
         YarnHit = false;
+        rb = GetComponent<Rigidbody>();
+        //rb.constraints = RigidbodyConstraints.FreezeAll;
     }
     void Update()
     {
