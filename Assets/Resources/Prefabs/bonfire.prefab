@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4003929985287438438}
   m_Layer: 0
   m_Name: bonfire
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1001 &4003929984811867549
 PrefabInstance:
