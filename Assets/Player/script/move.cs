@@ -5,11 +5,13 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     [SerializeField] private Vector3 Velocity;              // 移動方向
-    [SerializeField] private float MoveSpeed = 5.0f;        // 移動速度
+    [SerializeField] private float MoveSpeed = 10.0f;        // 移動速度
     [SerializeField] private float ApplySpeed = 0.2f;       // 回転の適用速度
     [SerializeField] private cameramove RefCamera;  // カメラの水平回転を参照する用
     public float LeftStickX;                                    // 左スティックX値
     public float LeftStickY;                                    // 左スティックY値
+    public float RightStickX;                                   // 右スティックY値
+    float RotY;
     Rigidbody rb;
     
     public Vector3 cameraForward;
@@ -25,6 +27,7 @@ public class move : MonoBehaviour
         gamepad = GetComponent<GamePad>();
         Life = 5;
         YarnHit = false;
+        RotY = 0;
         //rb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
@@ -46,6 +49,7 @@ public class move : MonoBehaviour
     {
         LeftStickX = gamepad.GetLeftStickX();
         LeftStickY = gamepad.GetLeftStickY();
+        RightStickX = gamepad.GetRightStickX();
         Velocity = Vector3.zero;
         if (LeftStickX > 0)
         {
@@ -63,56 +67,35 @@ public class move : MonoBehaviour
         {
             Velocity.z += LeftStickY;
         }
-        //入力検証
-        if (gamepad.GetCross()) { Debug.Log("Cross is be Pushed"); }
-        if (gamepad.GetCircle()) { Debug.Log("Circle is be Pushed"); }
-        if (gamepad.GetSquare()) { Debug.Log("Square is be Pushed"); }
-        if (gamepad.GetTriangle()) { Debug.Log("Triangle is be Pushed"); }
-        if (gamepad.GetDirectionKeyX()==-1) { Debug.Log("Left"); }
-        if (gamepad.GetDirectionKeyX()== 1) { Debug.Log("Right"); }
-        if (gamepad.GetDirectionKeyY()==-1) { Debug.Log("Down"); }
-        if (gamepad.GetDirectionKeyY()== 1) { Debug.Log("Up"); }
-
-
+        RotY += RightStickX;
     }
 
     void Transform()
     {
-        //糸に当たっているかどうか
-        if (YarnHit)
-        {
-            // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
-            Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime / 2;
-        }
-        else
-        {
-            // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
-            Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime;
-        }
+        // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
+        Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime*3;
+
+        //向き調整
+        this.transform.rotation = Quaternion.Euler(0, RotY, 0);
 
         // いずれかの方向に移動している場合
         if (Velocity.magnitude > 0)
         {
-            // プレイヤーの回転(transform.rotation)の更新
-            // 無回転状態のプレイヤーのZ+方向(後頭部)を、
-            // カメラの水平回転(RefCamera.hRotation)で回した移動の反対方向(-Velocity)に回す回転に段々近づけます
-            this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(RefCamera.hRotation * Velocity), ApplySpeed);
-
-
             // プレイヤーの位置(transform.position)の更新
             // カメラの水平回転(RefCamera.hRotation)で回した移動方向(Velocity)を足し込みます
             this.transform.position += RefCamera.hRotation * Velocity;
             
+        }
+        if(this.transform.position.z<=GameObject.Find("Main Camera").transform.position.z+10)
+        {
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 10); 
         }
     }
 
     //collider当たった時
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Yarn")
-        {
-            YarnHit = true;
-        }
+
     }
 
     private void OnTriggerExit(Collider other)
