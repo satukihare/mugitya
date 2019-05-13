@@ -81,6 +81,7 @@
     <Compile Include="Assets\Result\total_score.cs" />
     <Compile Include="Assets\Scenes\FadeManager\FadeManager.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
+    <Compile Include="Assets\Spider\SpiderMove.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
     <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
     <None Include="Assets\Field\Toon Forest\sqript\custom.shader" />

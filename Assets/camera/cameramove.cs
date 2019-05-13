@@ -14,6 +14,7 @@ public class cameramove : MonoBehaviour
 
     void Start()
     {
+        FadeManager.FadeIn();
         // 回転の初期化
         vRotation = Quaternion.Euler(45, 0, 0);         // 垂直回転(X軸を軸とする回転)は、30度見下ろす回転
         hRotation = Quaternion.identity;                // 水平回転(Y軸を軸とする回転)は、無回転
