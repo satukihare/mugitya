@@ -280,3 +280,7 @@ C:\Users\ginta\Documents\mugitya\obj\Debug\Assembly-CSharp.csproj.CoreCompileInp
 C:\Users\ginta\Documents\mugitya\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\ginta\Documents\mugitya\obj\Debug\Assembly-CSharp.dll
 C:\Users\ginta\Documents\mugitya\obj\Debug\Assembly-CSharp.pdb
+C:\Users\satukihare\Documents\mugitya\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\satukihare\Documents\mugitya\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\satukihare\Documents\mugitya\obj\Debug\Assembly-CSharp.dll
+C:\Users\satukihare\Documents\mugitya\obj\Debug\Assembly-CSharp.pdb
