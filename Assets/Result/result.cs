@@ -25,12 +25,8 @@ public class result : MonoBehaviour
             if (pauseUIInstance == null)
             {
                 pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
+                GameObject.Find("gameUI").SetActive(false);
                 Time.timeScale = 0f;
-            }
-            else
-            {
-                Destroy(pauseUIInstance);
-                Time.timeScale = 1f;
             }
         }
     }

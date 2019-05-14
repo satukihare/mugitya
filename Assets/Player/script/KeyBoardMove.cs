@@ -41,9 +41,14 @@ public class KeyBoardMove : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             velocity.x += 1;
         if (Input.GetKey(KeyCode.Q))
+        { 
             RotY -= 2;
+        }
         if (Input.GetKey(KeyCode.E))
+        {
             RotY += 2;
+        }
+            
        
     }
 

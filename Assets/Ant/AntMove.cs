@@ -10,13 +10,17 @@ public class AntMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Movespeed = 0.025f;
+        Movespeed = 0.02f;
         TargetPos = this.transform.forward;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
         this.transform.position = new Vector3(this.transform.position.x + TargetPos.x * Movespeed,
                                               this.transform.position.y + TargetPos.y * Movespeed,
                                               this.transform.position.z + TargetPos.z * Movespeed);
