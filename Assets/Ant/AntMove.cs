@@ -10,15 +10,16 @@ public class AntMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Movespeed = 0.02f;
+        Movespeed = 0.025f;
+        TargetPos = this.transform.forward;
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = new Vector3(this.transform.position.x + this.transform.forward.x * Movespeed,
-                                              this.transform.position.y + this.transform.forward.y * Movespeed,
-                                              this.transform.position.z + this.transform.forward.z * Movespeed);
+        this.transform.position = new Vector3(this.transform.position.x + TargetPos.x * Movespeed,
+                                              this.transform.position.y + TargetPos.y * Movespeed,
+                                              this.transform.position.z + TargetPos.z * Movespeed);
 
         if (this.transform.position.z <= GameObject.Find("Main Camera").transform.position.z+10)
         {
@@ -26,12 +27,23 @@ public class AntMove : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag=="fire")
+        {
+            Debug.Log("Hit Fire");
+            Destroy(this.gameObject);
+        }
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag==("Fire"))
+        if(other.tag==("fire"))
         {
-            TargetPos = other.transform.position;
-
+            Vector3 ToTarget = other.transform.position - this.transform.position;
+            TargetPos = ToTarget.normalized;
+            this.transform.forward = TargetPos;
         }
     }
 }

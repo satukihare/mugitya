@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6091876493350021361}
   - component: {fileID: 6091876493350021362}
   - component: {fileID: 6091876493350021357}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,6 +136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wind Vector
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114063078099705498, guid: f1b62950ea0801b46a310801788181c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3114063078099705499, guid: f1b62950ea0801b46a310801788181c7,
         type: 3}

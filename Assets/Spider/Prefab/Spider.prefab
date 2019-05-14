@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3846615385316623040}
   - component: {fileID: 3846615385317950178}
   - component: {fileID: 3846615385318916130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,9 +91,9 @@ GameObject:
   - component: {fileID: 3846615385693666041}
   - component: {fileID: 3846615385693666046}
   - component: {fileID: 3846615385693666040}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 3846615385316623046}
   - component: {fileID: 3846615385317950176}
   - component: {fileID: 3846615385318916128}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

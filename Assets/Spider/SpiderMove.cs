@@ -21,14 +21,13 @@ public class SpiderMove : MonoBehaviour
 
     void Update()
     {
-        //agent.SetDestination(TargetPos);
         agent.destination = TargetPos;
         Debug.Log(TargetPos);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag=="Fire")
+        if(collision.gameObject.tag=="fire")
         {
             Destroy(this.gameObject);
             //agent.enabled = false;
@@ -38,7 +37,7 @@ public class SpiderMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Fire")
+        if(other.tag=="fire")
         {
             TargetPos = other.transform.position;
         }

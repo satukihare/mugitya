@@ -28,7 +28,7 @@ public class Wind : MonoBehaviour
         {
             return;
         }
-        if(other.gameObject.tag=="Bug" && this.gameObject.name!="WindItem")
+        if((other.gameObject.tag == "bee") && this.gameObject.name!="WindItem")
         {
             //other.transform.forward = this.transform.forward;
 

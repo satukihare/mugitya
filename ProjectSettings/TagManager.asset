@@ -4,12 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
-  - Bug
-  - Enemy
-  - Pointer
+  - ant
+  - bee
+  - spider
+  - mantis
+  - hornet
+  - locust
+  - fire
+  - wind
+  - item
   - Fire
-  - Yarn
+  - Pointer
+  - rock
+  - touboku
+  - Bug
   layers:
   - Default
   - TransparentFX
@@ -19,16 +27,16 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Bug
-  - Item
-  - Enemy
-  - Pointer
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ant
+  - bee
+  - hornet
+  - spider
+  - mantis
+  - locust
+  - fire
+  - wind
+  - item
+  - player
   - 
   - 
   - 

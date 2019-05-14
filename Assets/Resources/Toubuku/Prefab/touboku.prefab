@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1948648014653711666}
   m_Layer: 0
   m_Name: touboku
-  m_TagString: Untagged
+  m_TagString: touboku
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03, y: 0.03, z: 0.15}
-  m_Center: {x: 0, y: 0.015, z: 0}
+  m_Size: {x: 0.03, y: 0.1, z: 0.15}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &1948648014653809580
 GameObject:
   m_ObjectHideFlags: 0
