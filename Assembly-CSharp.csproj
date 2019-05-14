@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ant\AntMove.cs" />
     <Compile Include="Assets\Bee\script\BeeMove.cs" />
     <Compile Include="Assets\Bee\script\BonfireHit.cs" />
     <Compile Include="Assets\camera\cameramove.cs" />
@@ -75,8 +76,14 @@
     <Compile Include="Assets\Pointer\script\SetItem.cs" />
     <Compile Include="Assets\Resources\Wind\Script\Wind.cs" />
     <Compile Include="Assets\Resources\Wind\Script\WindVector.cs" />
+    <Compile Include="Assets\Result\IconeMove.cs" />
+    <Compile Include="Assets\Result\next_result.cs" />
+    <Compile Include="Assets\Result\result.cs" />
+    <Compile Include="Assets\Result\Score.cs" />
+    <Compile Include="Assets\Result\total_score.cs" />
     <Compile Include="Assets\Scenes\FadeManager\FadeManager.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
+    <Compile Include="Assets\Spider\SpiderMove.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
     <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
     <Compile Include="Assets\Wasp\script\wasp.cs" />

@@ -8,12 +8,13 @@ public class cameramove : MonoBehaviour
     [SerializeField] private Transform player;          // 注視対象プレイヤー
     [SerializeField] private Quaternion vRotation;      // カメラの垂直回転(見下ろし回転)
     [SerializeField] public Quaternion hRotation;       // カメラの水平回転
-    private float distance = 40.0f;                     // 注視対象プレイヤーからカメラを離す距離
+    private float distance = 55.0f;                     // 注視対象プレイヤーからカメラを離す距離
     //private GameObject Player;
     private GamePad gamepad;
 
     void Start()
     {
+        FadeManager.FadeIn();
         // 回転の初期化
         vRotation = Quaternion.Euler(45, 0, 0);         // 垂直回転(X軸を軸とする回転)は、30度見下ろす回転
         hRotation = Quaternion.identity;                // 水平回転(Y軸を軸とする回転)は、無回転
@@ -27,6 +28,10 @@ public class cameramove : MonoBehaviour
 
     void LateUpdate()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
         // 水平回転の更新
         //if (Input.GetKey(KeyCode.Q) || gamepad.GetL1())
         //{

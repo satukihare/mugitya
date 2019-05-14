@@ -69,7 +69,7 @@ public class FadeManager:MonoBehaviour{
         if (isFadeIn)
         {
             //経過時間から透明度計算
-            alpha -= Time.deltaTime / fadeTime;
+            alpha -= Time.deltaTime*5 / fadeTime;
 
             //フェードイン終了判定
             if (alpha <= 0.0f)

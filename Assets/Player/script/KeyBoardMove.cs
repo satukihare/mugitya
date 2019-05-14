@@ -41,16 +41,16 @@ public class KeyBoardMove : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             velocity.x += 1;
         if (Input.GetKey(KeyCode.Q))
-            RotY -= 1;
+            RotY -= 2;
         if (Input.GetKey(KeyCode.E))
-            RotY += 1;
+            RotY += 2;
        
     }
 
     void Transform()
     {
         // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
-        velocity = velocity.normalized * moveSpeed * Time.deltaTime;
+        velocity = velocity.normalized * moveSpeed * Time.deltaTime * 3;
 
         //向き調整
         this.transform.rotation = Quaternion.Euler(0, RotY, 0);
@@ -61,6 +61,10 @@ public class KeyBoardMove : MonoBehaviour
             // プレイヤーの位置(transform.position)の更新
             // カメラの水平回転(refCamera.hRotation)で回した移動方向(velocity)を足し込みます
             transform.position += refCamera.hRotation * velocity;
+        }
+        if (this.transform.position.z <= GameObject.Find("Main Camera").transform.position.z + 12)
+        {
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 12);
         }
     }
 
