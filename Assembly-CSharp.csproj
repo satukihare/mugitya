@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scenes\TitleScene\Script\AntWalk_title.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\BeeTurn.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
+    <Compile Include="Assets\Spider\Script\SpiderSrc.cs" />
     <Compile Include="Assets\Spider\SpiderMove.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
     <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
