@@ -9,15 +9,24 @@ public class goal : MonoBehaviour
     private GameObject pauseUIPrefab;
     //　ポーズUIのインスタンス
     private GameObject pauseUIInstance;
-    public int goal_ant;
-    public int goal_bee;
-    public int goal_spider;
+  
+
+    //各虫のゴールした数用
+    //[虫のゴールした数]
+    //あり、ハチ、バッタ、蜘蛛、花
+    public int[] goal_insect_num = new int[5];
+    string[] goal_insect_name = { "ant","bee","locust","spider","flower" };
+
+
     // Start is called before the first frame update
     void Start()
     {
-        goal_ant = 0;
-        goal_bee = 0;
-        goal_spider = 0;
+        //初期化
+        for (int i = 0; i < goal_insect_num.Length; i++)
+        {
+            goal_insect_num[i] = 0;
+        }
+        
     }
 
     // Update is called once per frame
@@ -28,26 +37,18 @@ public class goal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "bee")
+        //虫の数だけまわしてゴールした数と消す処理してる
+        for (int i = 0; i < goal_insect_num.Length; i++)
         {
-            goal_bee++;
-            pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
-            GameObject.Find("gameUI").SetActive(false);
-            Time.timeScale = 0f;
-        }
-        if (collision.gameObject.tag == "ant")
-        {
-            goal_bee++;
-            pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
-            GameObject.Find("gameUI").SetActive(false);
-            Time.timeScale = 0f;
-        }
-        if (collision.gameObject.tag == "spider")
-        {
-            goal_bee++;
-            pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
-            GameObject.Find("gameUI").SetActive(false);
-            Time.timeScale = 0f;
+            if (collision.gameObject.tag == goal_insect_name[i])
+            {
+                //ゴールした！
+                goal_insect_num[i]++;
+                //消す処理
+                pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
+                GameObject.Find("gameUI").SetActive(false);
+                Time.timeScale = 0f;
+            }
         }
     }
 }

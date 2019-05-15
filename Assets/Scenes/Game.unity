@@ -341,9 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseUIPrefab: {fileID: 6312315037269746484, guid: 9fc8d178657877f4c9fcf6e14f6977b2,
     type: 3}
-  goal_ant: 0
-  goal_bee: 0
-  goal_spider: 0
+  goal_insect_num: 0000000000000000000000000000000000000000
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 1948648014653809576, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1948648014653587336, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
@@ -799,12 +797,12 @@ PrefabInstance:
     - target: {fileID: 1948648014653809580, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1948648014653809582, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac01153c84e9e6040baea4f5f1a6548c, type: 3}
@@ -892,7 +890,7 @@ PrefabInstance:
     - target: {fileID: 1948648014653809576, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1948648014653587336, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
@@ -952,12 +950,12 @@ PrefabInstance:
     - target: {fileID: 1948648014653809580, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1948648014653809582, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac01153c84e9e6040baea4f5f1a6548c, type: 3}
@@ -1485,7 +1483,7 @@ PrefabInstance:
     - target: {fileID: 1948648014653809576, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1948648014653587336, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
@@ -1545,12 +1543,12 @@ PrefabInstance:
     - target: {fileID: 1948648014653809580, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1948648014653809582, guid: ac01153c84e9e6040baea4f5f1a6548c,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac01153c84e9e6040baea4f5f1a6548c, type: 3}
