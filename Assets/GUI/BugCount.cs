@@ -26,23 +26,25 @@ public class BugCount : MonoBehaviour
             Check("ant");
             Check("bee");
             Check("spider");
+            Check("locust");
             totalBug = Check("ant") + Check("bee") + Check("spider");
             timer = 0;
         }
         gameManager.setBugNums("ant", Check("ant") - 1);
         gameManager.setBugNums("bee", Check("bee") - 1);
         gameManager.setBugNums("spider", Check("spider") - 1);
-    
+        gameManager.setBugNums("locust", Check("locust") - 1);
+
     }
 
     //シーン上のBlockタグが付いたオブジェクトを数える
     public int Check(string tagname)
     {
         tagObjects = GameObject.FindGameObjectsWithTag(tagname);
-        Debug.Log(tagObjects.Length  + "  has  " + tagname); //tagObjects.Lengthはオブジェクトの数
+        //Debug.Log(tagObjects.Length  + "  has  " + tagname); //tagObjects.Lengthはオブジェクトの数
         if (tagObjects.Length == 0)
         {
-            Debug.Log(tagname + "タグがついたオブジェクトはありません");
+            //Debug.Log(tagname + "タグがついたオブジェクトはありません");
         }
         return tagObjects.Length;
     }

@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: 4c2eb48ea5b485149b3d1a34a3c6a3f7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body1
+    100004: eye
+    100006: fang
+    100008: HEAD
+    100010: joint10
+    100012: joint10 1
+    100014: joint11
+    100016: joint11 1
+    100018: joint12
+    100020: joint13
+    100022: joint14
+    100024: joint15
+    100026: joint17
+    100028: joint18
+    100030: joint19
+    100032: joint21
+    100034: joint22
+    100036: joint23
+    100038: joint25
+    100040: joint25 1
+    100042: joint4
+    100044: joint4 1
+    100046: joint5
+    100048: joint5 1
+    100050: joint6
+    100052: joint6 1
+    100054: joint9
+    100056: joint9 1
+    100058: model
+    100060: onaka
+    100062: pCylinder1
+    100064: pCylinder2
+    100066: pCylinder7
+    100068: pCylinder8
+    100070: polySurface1
+    100072: polySurface10
+    100074: polySurface11
+    100076: polySurface12
+    100078: polySurface2
+    100080: polySurface3
+    100082: polySurface4
+    100084: polySurface5
+    100086: polySurface7
+    100088: polySurface8
+    100090: polySurface9
+    100092: reg_back
+    100094: reg_back_L
+    100096: reg_back_R
+    100098: reg_front
+    100100: reg_front 1
+    100102: reg_side
+    100104: reg_side_L
+    100106: reg_side_R
+    100108: root
+    100110: syokkaku
+    100112: transform1
+    100114: transform10
+    100116: transform11
+    100118: transform2
+    100120: transform7
+    100122: transform8
+    100124: transform9
+    100126: wing
+    100128: wing01
+    100130: wing02
+    400000: //RootNode
+    400002: body1
+    400004: eye
+    400006: fang
+    400008: HEAD
+    400010: joint10
+    400012: joint10 1
+    400014: joint11
+    400016: joint11 1
+    400018: joint12
+    400020: joint13
+    400022: joint14
+    400024: joint15
+    400026: joint17
+    400028: joint18
+    400030: joint19
+    400032: joint21
+    400034: joint22
+    400036: joint23
+    400038: joint25
+    400040: joint25 1
+    400042: joint4
+    400044: joint4 1
+    400046: joint5
+    400048: joint5 1
+    400050: joint6
+    400052: joint6 1
+    400054: joint9
+    400056: joint9 1
+    400058: model
+    400060: onaka
+    400062: pCylinder1
+    400064: pCylinder2
+    400066: pCylinder7
+    400068: pCylinder8
+    400070: polySurface1
+    400072: polySurface10
+    400074: polySurface11
+    400076: polySurface12
+    400078: polySurface2
+    400080: polySurface3
+    400082: polySurface4
+    400084: polySurface5
+    400086: polySurface7
+    400088: polySurface8
+    400090: polySurface9
+    400092: reg_back
+    400094: reg_back_L
+    400096: reg_back_R
+    400098: reg_front
+    400100: reg_front 1
+    400102: reg_side
+    400104: reg_side_L
+    400106: reg_side_R
+    400108: root
+    400110: syokkaku
+    400112: transform1
+    400114: transform10
+    400116: transform11
+    400118: transform2
+    400120: transform7
+    400122: transform8
+    400124: transform9
+    400126: wing
+    400128: wing01
+    400130: wing02
+    2100000: blinn1
+    2100002: me
+    2100004: mouse
+    2100006: lambert3
+    2100008: body
+    4300000: HEAD
+    4300002: body1
+    4300004: polySurface11
+    4300006: polySurface12
+    4300008: fang
+    4300010: pCylinder2
+    4300012: pCylinder1
+    4300014: pCylinder7
+    4300016: pCylinder8
+    4300018: onaka
+    4300020: polySurface9
+    4300022: polySurface10
+    4300024: polySurface3
+    4300026: polySurface4
+    4300028: polySurface7
+    4300030: polySurface8
+    9500000: //RootNode
+    13700000: body1
+    13700002: fang
+    13700004: HEAD
+    13700006: onaka
+    13700008: pCylinder1
+    13700010: pCylinder2
+    13700012: pCylinder7
+    13700014: pCylinder8
+    13700016: polySurface10
+    13700018: polySurface11
+    13700020: polySurface12
+    13700022: polySurface3
+    13700024: polySurface4
+    13700026: polySurface7
+    13700028: polySurface8
+    13700030: polySurface9
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

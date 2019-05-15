@@ -28,10 +28,6 @@ public class Wind : MonoBehaviour
         {
             return;
         }
-        if(other.gameObject.tag=="Bug" && this.gameObject.name!="WindItem")
-        {
-            other.transform.position = this.transform.forward + other.transform.position;
-        }
         
         // 相対速度計算
         var relativeVelocity = velocity - other.GetComponent<Rigidbody>().velocity;

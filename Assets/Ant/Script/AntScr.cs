@@ -61,11 +61,15 @@ public class AntScr : MonoBehaviour
         switch (erea.getTagName())
         {
             // 火を見つけた際
-            case "Fire":
+            case "fire":
                 Debug.Log("FireSerch!!");
                 hitFire();
                 break;
 
+            case "bee":
+                Debug.Log("beeHit");
+                hitBee();
+                break;
             default:
                 break;
         }
@@ -78,6 +82,22 @@ public class AntScr : MonoBehaviour
         Vector3 _tecVec;
         _vec = _vec - this.transform.position;
         _tecVec.x = -_vec.x; _tecVec.y = 0; _tecVec.z = -_vec.z;
+        //_tecVec.x =0; _tecVec.y = 0; _tecVec.z = -0.2f;
+
+        //erea.transform.localPosition = _tecVec;
+        transform.GetChild(2).gameObject.transform.position = this.transform.position + _tecVec.normalized * intervalSize * 50;
+        //Debug.Log(_tecVec);
+
+        calcFrontVec();
+    }
+
+    //ハチがエリアに侵入
+    private void hitBee()
+    {
+        Vector3 _vec = erea.getHitPos();
+        Vector3 _tecVec;
+        _vec = _vec - this.transform.position;
+        _tecVec.x = _vec.x; _tecVec.y = 0; _tecVec.z = _vec.z;
         //_tecVec.x =0; _tecVec.y = 0; _tecVec.z = -0.2f;
 
         //erea.transform.localPosition = _tecVec;
