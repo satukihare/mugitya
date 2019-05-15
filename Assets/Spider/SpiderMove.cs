@@ -5,41 +5,49 @@ using UnityEngine.AI;
 
 public class SpiderMove : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 TargetPos;
-    NavMeshAgent agent;
-
+    float Movespeed;
+    Vector3 TargetPos;
+    // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = 5.0f;
-        agent.angularSpeed = 360.0f;
-        agent.acceleration = 5.0f;
-        agent.stoppingDistance = 2.0f;
-        
+        Movespeed = 0.02f;
+        TargetPos = this.transform.forward;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        agent.destination = TargetPos;
-        Debug.Log(TargetPos);
+        if (Mathf.Approximately(Time.timeScale, 0f))
+        {
+            return;
+        }
+        this.transform.position = new Vector3(this.transform.position.x + TargetPos.x * Movespeed,
+                                              this.transform.position.y + TargetPos.y * Movespeed,
+                                              this.transform.position.z + TargetPos.z * Movespeed);
+
+        if (this.transform.position.z <= GameObject.Find("Main Camera").transform.position.z + 10)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag=="fire")
+        if (collision.gameObject.tag == "fire")
         {
+            Debug.Log("Hit Fire");
             Destroy(this.gameObject);
-            //agent.enabled = false;
         }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="fire")
+        if (other.tag == ("fire"))
         {
-            TargetPos = other.transform.position;
+            Vector3 ToTarget = other.transform.position - this.transform.position;
+            TargetPos = ToTarget.normalized;
+            this.transform.forward = TargetPos;
         }
     }
 }

@@ -83,6 +83,8 @@
     <Compile Include="Assets\Result\Score.cs" />
     <Compile Include="Assets\Result\total_score.cs" />
     <Compile Include="Assets\Scenes\FadeManager\FadeManager.cs" />
+    <Compile Include="Assets\Scenes\TitleScene\Script\AntWalk_title.cs" />
+    <Compile Include="Assets\Scenes\TitleScene\Script\BeeTurn.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
     <Compile Include="Assets\Spider\SpiderMove.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
