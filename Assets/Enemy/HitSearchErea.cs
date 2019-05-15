@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class HitSearchErea : MonoBehaviour
 {
-    private bool b_ereaIn;
+    private bool bInErea;                   //中に入っている際
+    private bool bTouchErea;                //触れた際
+    [SerializeField] string[] nameStr;      //タグの配列
+    string tagName;
+    Vector3 pos;
 
     void Start()
     {
-        b_ereaIn = false;
+        bInErea = false;
+        bTouchErea = false;
     }
+    
 
-    // Update is called once per frame
     void Update()
     {
     }
@@ -19,25 +24,47 @@ public class HitSearchErea : MonoBehaviour
     // 情報を親へ渡すためのGetter
     public bool getEreaEnable()
     {
-        return b_ereaIn;
+        if(!bInErea && bTouchErea)
+        {
+            bInErea = true;
+            return bTouchErea;
+        }
+        return false;
     }
     
     //　エリアに侵入
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        foreach (string _name in nameStr)
         {
-            Debug.Log("end");
-            b_ereaIn = true;
+            if (other.tag == _name)
+            {
+                bTouchErea = true;
+                tagName = _name;
+                pos = other.ClosestPointOnBounds(this.transform.position);
+                return;
+            }
         }
     }
+
     //エリアから脱出
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        bTouchErea = false;
+        bInErea = false;
+    }
+
+    public string getTagName()
+    {
+        if(bTouchErea)
         {
-            Debug.Log("end");
-            b_ereaIn = false;
+            return tagName;
         }
+        return "Noting";
+    }
+
+    public Vector3 getHitPos()
+    {
+        return pos;
     }
 }
