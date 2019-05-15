@@ -13,7 +13,7 @@ public class Wind : MonoBehaviour
     {
         RotY = 0;
         coefficient = 10.0f;
-        WindSpeed = 20.0f;
+        WindSpeed = 10.0f;
     }
 
     void Update()
@@ -28,15 +28,15 @@ public class Wind : MonoBehaviour
         {
             return;
         }
-        if(other.gameObject.tag=="Bug" && this.gameObject.name!="WindItem")
+        if((other.gameObject.tag == "bee") && this.gameObject.name!="WindItem")
         {
-            other.transform.forward = this.transform.forward;
-        }
-        
-        // 相対速度計算
-        var relativeVelocity = velocity - other.GetComponent<Rigidbody>().velocity;
+            //other.transform.forward = this.transform.forward;
 
-        // 空気抵抗を与える
-        other.GetComponent<Rigidbody>().AddForce(coefficient * relativeVelocity);
+            // 相対速度計算
+            var relativeVelocity = velocity - other.GetComponent<Rigidbody>().velocity;
+
+            // 空気抵抗を与える
+            other.GetComponent<Rigidbody>().AddForce(coefficient * relativeVelocity);
+        }
     }
 }

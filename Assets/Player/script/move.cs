@@ -37,12 +37,12 @@ public class move : MonoBehaviour
         var controllerNames = Input.GetJoystickNames();
 
         // 一台もコントローラが接続されていなければエラー
-        if (controllerNames[0] != "")
-        {
+        //if (controllerNames[0] != "")
+        //{
             GamePadInput();
 
             Transform();
-        }
+        //}
     }
 
     void GamePadInput()
@@ -67,7 +67,7 @@ public class move : MonoBehaviour
         {
             Velocity.z += LeftStickY;
         }
-        RotY += RightStickX;
+        RotY += RightStickX*2;
     }
 
     void Transform()
@@ -86,9 +86,9 @@ public class move : MonoBehaviour
             this.transform.position += RefCamera.hRotation * Velocity;
             
         }
-        if(this.transform.position.z<=GameObject.Find("Main Camera").transform.position.z+10)
+        if(this.transform.position.z<=GameObject.Find("Main Camera").transform.position.z+12)
         {
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 10); 
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 12); 
         }
     }
 

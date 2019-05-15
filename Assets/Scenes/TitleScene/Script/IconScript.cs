@@ -14,6 +14,7 @@ public class IconScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FadeManager.FadeIn();
         IconPos = 0;
         b = false;
         rect = GetComponent<RectTransform>();
@@ -47,14 +48,21 @@ public class IconScript : MonoBehaviour
             b = true;
         }
 
-        if (IconPos == 0) { rect.localPosition = new Vector3(-130, -35, 0); }
-        if (IconPos == 1) { rect.localPosition = new Vector3(-130, -90, 0); }
+        if (IconPos == 0) { rect.localPosition = new Vector3(-255, -205, 0); }
+        if (IconPos == 1) { rect.localPosition = new Vector3(-255, -365, 0); }
 
         if (IconPos == 0)
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
             {
                 FadeManager.FadeOut(1);  
+            }
+        }
+        if (IconPos == 1)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
+            {
+                Application.Quit();
             }
         }
 
