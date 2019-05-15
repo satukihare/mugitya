@@ -28,11 +28,24 @@ public class Wind : MonoBehaviour
         {
             return;
         }
-        
-        // 相対速度計算
+
+        //// 相対速度計算
         var relativeVelocity = velocity - other.GetComponent<Rigidbody>().velocity;
 
-        // 空気抵抗を与える
+        //// 空気抵抗を与える
         other.GetComponent<Rigidbody>().AddForce(coefficient * relativeVelocity);
+
+        if (other.tag=="ant" && this.gameObject.name!="WindItem")
+        {
+            //Debug.Log(other.transform.position);
+            // 相対速度計算
+            relativeVelocity = velocity - other.GetComponent<Rigidbody>().velocity;
+
+            // 空気抵抗を与える
+            other.GetComponent<Rigidbody>().AddForce((coefficient * relativeVelocity)/5);
+
+        }
+        
+
     }
 }
