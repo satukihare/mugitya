@@ -30,7 +30,7 @@ public class Wind : MonoBehaviour
         }
         if(other.gameObject.tag=="Bug" && this.gameObject.name!="WindItem")
         {
-            other.transform.forward = this.transform.forward;
+            other.transform.position = this.transform.forward + other.transform.position;
         }
         
         // 相対速度計算

@@ -53,19 +53,7 @@ public class AntScr : MonoBehaviour
         }
         agent.destination = point.position;
     }
-
-    // 次の巡回地点を設定する処理
-    //private void GotoNextPoint()
-    //{
-    //    // 巡回地点が設定されていなければ
-    //    if (point.Length == 0)
-    //        return;
-    //
-    //    // 現在選択されている配列の座標を巡回地点の座標に代入
-    //    agent.destination = point.position;
-    //    // 配列の中から次の巡回地点を選択（必要に応じて繰り返し）
-    //    destPoint = (destPoint + 1) % points.Length;
-    //}
+    
 
 
    public void InErea()
@@ -74,7 +62,7 @@ public class AntScr : MonoBehaviour
         {
             // 火を見つけた際
             case "Fire":
-                Debug.Log("FireSerch");
+                Debug.Log("FireSerch!!");
                 hitFire();
                 break;
 
@@ -84,7 +72,7 @@ public class AntScr : MonoBehaviour
     }
 
     //火がエリアに侵入
-    void hitFire()
+    private void hitFire()
     {
         Vector3 _vec = erea.getHitPos();
         Vector3 _tecVec;
@@ -94,7 +82,7 @@ public class AntScr : MonoBehaviour
 
         //erea.transform.localPosition = _tecVec;
         transform.GetChild(2).gameObject.transform.position = this.transform.position + _tecVec.normalized * intervalSize * 50;
-        Debug.Log(_tecVec);
+        //Debug.Log(_tecVec);
 
         calcFrontVec();
     }
