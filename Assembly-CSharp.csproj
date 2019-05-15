@@ -72,6 +72,7 @@
     <Compile Include="Assets\Player\script\KeyBoardMove.cs" />
     <Compile Include="Assets\Player\script\move.cs" />
     <Compile Include="Assets\Player\script\PadCheck.cs" />
+    <Compile Include="Assets\Pointer\ItemBag.cs" />
     <Compile Include="Assets\Pointer\script\OrderPointer.cs" />
     <Compile Include="Assets\Pointer\script\SetItem.cs" />
     <Compile Include="Assets\Resources\Wind\Script\Wind.cs" />

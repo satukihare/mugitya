@@ -131,6 +131,7 @@ d03883a76a1702ccb79957be4fa46516 Assembly-CSharp.dll:.next_result
 68a6d5364894cdd40c61944641d1464f Assembly-CSharp.dll:.SetItem
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 5991904d1272427a23abc80d93e6a366 Assembly-CSharp.dll:.Wind
+002020d0363e1d2fc6726436c90292ce Assembly-CSharp.dll:.BeeTurn
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.wasp
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -185,5 +186,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 c4b36f778ee01142a93f900e35d3958d Assembly-CSharp.dll:.RotatingTheSun
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BeeMove
-002020d0363e1d2fc6726436c90292ce Assembly-CSharp.dll:.BeeTurn
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AntWalk_title
