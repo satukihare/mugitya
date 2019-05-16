@@ -95,7 +95,7 @@ MonoBehaviour:
   bug_num: 0
   maeScore: {fileID: 908018710082627512}
   End_Score: 0
-  goal_obj: {fileID: 0}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 0
 --- !u!1 &598336552866785298
 GameObject:
@@ -131,10 +131,10 @@ RectTransform:
   m_Father: {fileID: 5996847518914979258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.8833333, y: 1}
+  m_AnchoredPosition: {x: 143.5, y: -8}
+  m_SizeDelta: {x: 107, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5385593583456278697
 CanvasRenderer:
@@ -190,11 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337cc392a1868847b872e6846925479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bug_num: 0
+  bug_num: 1
   maeScore: {fileID: 5728694744701039107}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 3
 --- !u!1 &790072196352110034
 GameObject:
@@ -230,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00001049, y: 181.5}
-  m_SizeDelta: {x: 168.3, y: 49}
+  m_AnchoredPosition: {x: 24, y: 158}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6934116226603653200
 CanvasRenderer:
@@ -308,10 +307,10 @@ RectTransform:
   m_Father: {fileID: 6312315038162039512}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319, y: 57}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchorMin: {x: 0.09875, y: 0.4711153}
+  m_AnchorMax: {x: 0.17250001, y: 0.6156617}
+  m_AnchoredPosition: {x: 0.5, y: -0.5}
+  m_SizeDelta: {x: 1, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3049360718179159305
 CanvasRenderer:
@@ -343,7 +342,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: cbb96c0c543a4ff49bde75f238c489e9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -383,10 +382,10 @@ RectTransform:
   m_Father: {fileID: 5343193268626143231}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 86, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &273990081340363404
 CanvasRenderer:
@@ -445,8 +444,7 @@ MonoBehaviour:
   bug_num: 0
   maeScore: {fileID: 5505205020712676208}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 1
 --- !u!1 &4227617899569240210
 GameObject:
@@ -482,10 +480,10 @@ RectTransform:
   m_Father: {fileID: 3134519713683958498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 140, y: -8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 100, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1080827222442130212
 CanvasRenderer:
@@ -541,11 +539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337cc392a1868847b872e6846925479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bug_num: 0
+  bug_num: 1
   maeScore: {fileID: 5505205020712676208}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 2
 --- !u!1 &4533216383303081911
 GameObject:
@@ -564,7 +561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &181397632732130245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -781,8 +778,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b50a580cb7b90fa45ba6dca722bc2e87, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -817,16 +814,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4933615211645128276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 735358717046979731}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 87, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3357873258013623430
 CanvasRenderer:
@@ -885,8 +882,7 @@ MonoBehaviour:
   bug_num: 0
   maeScore: {fileID: 5728694744701039107}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 2
 --- !u!1 &5334442015259261638
 GameObject:
@@ -921,10 +917,10 @@ RectTransform:
   m_Father: {fileID: 5027633357507938314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 86, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4837123256037478161
 CanvasRenderer:
@@ -983,8 +979,7 @@ MonoBehaviour:
   bug_num: 0
   maeScore: {fileID: 1642248244985397464}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 3
 --- !u!1 &5619587511478346500
 GameObject:
@@ -1078,7 +1073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5987040315798781700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1272,10 +1267,10 @@ RectTransform:
   m_Father: {fileID: 6312315039048758709}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 86, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6312315037691108403
 CanvasRenderer:
@@ -1334,8 +1329,7 @@ MonoBehaviour:
   bug_num: 0
   maeScore: {fileID: 6312315039048758710}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 0
 --- !u!1 &6312315038113351717
 GameObject:
@@ -1370,10 +1364,10 @@ RectTransform:
   m_Father: {fileID: 6312315038162039512}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319, y: 127.00001}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchorMin: {x: 0.09875, y: 0.72}
+  m_AnchorMax: {x: 0.17250001, y: 0.85366917}
+  m_AnchoredPosition: {x: -1.5, y: -2}
+  m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6312315038113351712
 CanvasRenderer:
@@ -1405,7 +1399,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b1fcc6cd8bfee8a40894849babebb030, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1530,10 +1524,10 @@ RectTransform:
   m_Father: {fileID: 6312315038113351718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 140, y: -8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 100, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6312315039048758711
 CanvasRenderer:
@@ -1592,8 +1586,7 @@ MonoBehaviour:
   bug_num: 1
   maeScore: {fileID: 0}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 0
 --- !u!1 &6433098812369308269
 GameObject:
@@ -1629,10 +1622,10 @@ RectTransform:
   m_Father: {fileID: 7688456358535010853}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.86651635}
+  m_AnchoredPosition: {x: 140, y: -4}
+  m_SizeDelta: {x: 100, y: -22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &592921389218109524
 CanvasRenderer:
@@ -1691,8 +1684,7 @@ MonoBehaviour:
   bug_num: 1
   maeScore: {fileID: 6312315039048758710}
   End_Score: 0
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 1
 --- !u!1 &6653526196529082224
 GameObject:
@@ -1790,7 +1782,7 @@ MonoBehaviour:
   bug_num: 0
   maeScore: {fileID: 0}
   End_Score: 0
-  goal_obj: {fileID: 0}
+  insect_goal: 0000000000000000000000000000000000000000
   insect_number: 0
 --- !u!1 &8341823906413605344
 GameObject:
@@ -1858,8 +1850,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 20392c974c2143748bfc974567b7cc24, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1900,10 +1892,10 @@ RectTransform:
   m_Father: {fileID: 6312315038162039512}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: 127}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchorMin: {x: 0.57750005, y: 0.72}
+  m_AnchorMax: {x: 0.65000004, y: 0.85366917}
+  m_AnchoredPosition: {x: 1, y: -2}
+  m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7290940484089475036
 CanvasRenderer:
@@ -1935,7 +1927,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b3ee791d4b419794e80bb1372b603bf5, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1977,7 +1969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: -135}
+  m_AnchoredPosition: {x: -173, y: -118}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2155791392609037629
@@ -2035,7 +2027,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mae_score: {fileID: 8931231114003285745}
-  goal_obj: {fileID: 0}
+  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
+    type: 3}
+  insect_goal: 0000000000000000000000000000000000000000
+  insect_score: 64000000f4010000f4010000e803000088130000
+  total_score_: 0
 --- !u!1 &9165203161835652325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,10 +2065,10 @@ RectTransform:
   m_Father: {fileID: 6312315038162039512}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: 57}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchorMin: {x: 0.57750005, y: 0.4711153}
+  m_AnchorMax: {x: 0.65000004, y: 0.6156617}
+  m_AnchoredPosition: {x: 1, y: -3}
+  m_SizeDelta: {x: 2, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5540924808824587220
 CanvasRenderer:
@@ -2104,7 +2100,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: f7b3d0aac3a5ed047a0d525ee1832d00, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

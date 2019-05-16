@@ -86,9 +86,9 @@ public class move : MonoBehaviour
             this.transform.position += RefCamera.hRotation * Velocity;
             
         }
-        if(this.transform.position.z<=GameObject.Find("Main Camera").transform.position.z+12)
+        if(this.transform.position.z<=GameObject.Find("Main Camera").transform.position.z+13)
         {
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 12); 
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 13); 
         }
     }
 

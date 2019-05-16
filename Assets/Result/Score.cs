@@ -12,8 +12,8 @@ public class Score : MonoBehaviour
     public Text maeScore;                   //上のスコア用
     int score;                     
     public bool End_Score;                  //処理が終わったか判定用
-    public GameObject goal_obj;             //ゴールオブジェ
-    int[] insect_goal = new int[5];         //ゴールした虫の数参照用
+    GameObject goal_obj;             //ゴールオブジェ
+    public int[] insect_goal = new int[5];         //ゴールした虫の数参照用
     public int insect_number;               //使いたい配列番号
 
     int[] insect_score = {100,500,500,1000, 5000};    //各得点(ゴールした虫の数と一緒)
@@ -21,6 +21,9 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //ゴールオブジェ取得
+        goal_obj = GameObject.Find("Cylinder");
+
         //ゴールした数呼び出し
         for (int i = 0; i < insect_goal.Length; i++)
         {
@@ -50,6 +53,11 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (insect_goal[insect_number] == 0)
+        {
+            End_Score = true;
+        }
+    
         //虫の数の場合
         if (bug_num)
         {
@@ -59,7 +67,7 @@ public class Score : MonoBehaviour
                 //参照したスコア分ぶんまわす
                 if (CountScore < insect_goal[insect_number])
                 {
-                    CountScore ++;
+                    CountScore++;
 
                     if (CountScore >= insect_goal[insect_number])
                     {
@@ -67,7 +75,6 @@ public class Score : MonoBehaviour
                     }
 
                 }
-
                 my_score.text = " x " + CountScore.ToString();
             }
         }
@@ -79,7 +86,7 @@ public class Score : MonoBehaviour
 
                 if (CountScore < score)
                 {
-                    CountScore += 10;
+                    CountScore +=10;
 
                     if (CountScore >= score)
                     {

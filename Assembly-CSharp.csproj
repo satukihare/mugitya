@@ -71,6 +71,7 @@
     <Compile Include="Assets\GameMnger\script\gameMnger.cs" />
     <Compile Include="Assets\GUI\BugCount.cs" />
     <Compile Include="Assets\GUI\script\NumRender.cs" />
+    <Compile Include="Assets\GUI\script\totalScore.cs" />
     <Compile Include="Assets\Player\script\ChangeItem.cs" />
     <Compile Include="Assets\Player\script\KeyBoardMove.cs" />
     <Compile Include="Assets\Player\script\move.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Spider\Script\SpiderSrc.cs" />
     <Compile Include="Assets\Spider\SpiderMove.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
+    <Compile Include="Assets\system\HitFire.cs" />
     <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
     <Compile Include="Assets\Wasp\script\wasp.cs" />
     <None Include="Assets\Field\Toon Forest\sqript\custom.shader" />

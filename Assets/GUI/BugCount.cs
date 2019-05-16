@@ -9,7 +9,7 @@ public class BugCount : MonoBehaviour
     float timer = 0.0f;
     float interval = 2.0f;
     private gameMnger gameManager;
-    int totalBug;
+    public int totalBug;
     // Use this for initialization
     void Start()
     {
