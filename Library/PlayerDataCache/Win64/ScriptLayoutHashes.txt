@@ -4,6 +4,7 @@ C:/Users/ginta/Desktop/mugitya/Flower&Insects.exe
 SceneListBegin?
 Assets/Scenes/TitleScene.unity
 Assets/Scenes/Game.unity
+Assets/Scenes/Stage2.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 4634bea224d7ff4565ab0ba6708f7562 Assembly-CSharp.dll:.BeeScr
@@ -127,6 +128,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 d03883a76a1702ccb79957be4fa46516 Assembly-CSharp.dll:.next_result
+4ceb68650a67de55d63b1e4c103c85d4 Assembly-CSharp.dll:.totalScore
 25a8193461977a85c9bd1a6833211069 Assembly-CSharp.dll:.GamePad
 b9b86dab7767436b8958ee1421267646 Assembly-CSharp.dll:.total_score
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
@@ -192,5 +194,5 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 c4b36f778ee01142a93f900e35d3958d Assembly-CSharp.dll:.RotatingTheSun
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BeeMove
+23ec7bd056d46ba92a23284ffa01a500 Assembly-CSharp.dll:.TitleBGM
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AntWalk_title
-4ceb68650a67de55d63b1e4c103c85d4 Assembly-CSharp.dll:.totalScore

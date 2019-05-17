@@ -32,17 +32,7 @@ public class cameramove : MonoBehaviour
         {
             return;
         }
-        // 水平回転の更新
-        //if (Input.GetKey(KeyCode.Q) || gamepad.GetL1())
-        //{
-        //    hRotation *= Quaternion.Euler(0,-turnSpeed/5, 0);
-        //}
-        //if (Input.GetKey(KeyCode.E) || gamepad.GetR1())
-        //{
-        //    hRotation *= Quaternion.Euler(0, turnSpeed/5, 0);
-        //}
-        // カメラの回転(transform.rotation)の更新
-        // 方法1 : 垂直回転してから水平回転する合成回転とします
+
         transform.rotation = hRotation * vRotation;
 
         // カメラの位置(transform.position)の更新

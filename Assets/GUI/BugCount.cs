@@ -14,7 +14,7 @@ public class BugCount : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("gameMnger").GetComponent<gameMnger>();
-        totalBug= Check("ant") + Check("bee")+ Check("spider");
+        totalBug= Check("ant") + Check("bee")+ Check("spider")-3;
     }
 
     // Update is called once per frame
@@ -27,13 +27,14 @@ public class BugCount : MonoBehaviour
             Check("bee");
             Check("spider");
             Check("locust");
-            totalBug = Check("ant") + Check("bee") + Check("spider");
+            totalBug = Check("ant") + Check("bee") + Check("spider")-3;
             timer = 0;
         }
         gameManager.setBugNums("ant", Check("ant") - 1);
         gameManager.setBugNums("bee", Check("bee") - 1);
         gameManager.setBugNums("spider", Check("spider") - 1);
         gameManager.setBugNums("locust", Check("locust") - 1);
+        Debug.Log(totalBug);
 
     }
 

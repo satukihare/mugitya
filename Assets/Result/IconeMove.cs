@@ -52,7 +52,7 @@ public class IconeMove : MonoBehaviour
         if (IconPos == 0) { rect.localPosition = new Vector3(95, -84, 0); }
         if (IconPos == 1) { rect.localPosition = new Vector3(95, -160, 0); }
 
-        int currentSceneindex = SceneManager.GetActiveScene().buildIndex;//現在のシーン番号を取得
+        int currentSceneindex = SceneManager.GetActiveScene().buildIndex+1;//現在のシーン番号を取得
 
         Debug.Log(currentSceneindex);
         if (IconPos == 1)
@@ -60,7 +60,14 @@ public class IconeMove : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
             {
                 Time.timeScale = 1f;
-                FadeManager.FadeOut(currentSceneindex);//現在のシーン番号を取得＋１(次のステージにFade)
+                if (currentSceneindex > 2)
+                {
+                    FadeManager.FadeOut(0);
+                }
+                else
+                {
+                    FadeManager.FadeOut(currentSceneindex);//現在のシーン番号を取得＋１(次のステージにFade)
+                }
             }
         }
 
