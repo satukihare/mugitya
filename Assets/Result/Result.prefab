@@ -177,7 +177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x 10
+  m_Text: x 0
 --- !u!114 &820055174249370510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' =  100'
+  m_Text: ' =  0'
 --- !u!114 &5132873259018394391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x 10
+  m_Text: x 0
 --- !u!114 &3408752892810682220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' =  100'
+  m_Text: ' =  0'
 --- !u!114 &3760440264824555474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' =  100'
+  m_Text: ' =  0'
 --- !u!114 &1244749754370294197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' =  100'
+  m_Text: ' =  0'
 --- !u!114 &7396606907766767966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,7 +1570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x 10
+  m_Text: x 0
 --- !u!114 &4868025950215968892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x 10
+  m_Text: x 0
 --- !u!114 &7672633778526282077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,7 +1945,7 @@ GameObject:
   - component: {fileID: 6959626970542414704}
   - component: {fileID: 2155791392609037629}
   - component: {fileID: 5398058352376442958}
-  - component: {fileID: 7423466625806267274}
+  - component: {fileID: 8040228314867580787}
   m_Layer: 5
   m_Name: Total_Score
   m_TagString: Untagged
@@ -2014,7 +2014,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Total
---- !u!114 &7423466625806267274
+--- !u!114 &8040228314867580787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2027,10 +2027,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mae_score: {fileID: 8931231114003285745}
-  goal_obj: {fileID: 4982613355255537318, guid: 3ef84ad24933e4b42bc7e02c2ca7538d,
-    type: 3}
+  goal_obj: {fileID: 0}
   insect_goal: 0000000000000000000000000000000000000000
-  insect_score: 64000000f4010000f4010000e803000088130000
+  insect_score: 0a0000003200000064000000c800000000000000
   total_score_: 0
 --- !u!1 &9165203161835652325
 GameObject:
