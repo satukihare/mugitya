@@ -10,13 +10,13 @@ public class total_score : MonoBehaviour
     int CountScore = 0;
     public GameObject goal_obj;             //ゴールオブジェ
     public int[] insect_goal = new int[5];         //ゴールした虫の数参照用
-    public int[] insect_score = { 100, 500, 500, 1000, 5000 };    //各得点(ゴールした虫の数と一緒)
+    public int[] insect_score = { 10, 50, 100, 200, 5000 };    //各得点(ゴールした虫の数と一緒)
     public int total_score_ = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        goal_obj = GameObject.Find("Cylinder");
+        goal_obj = GameObject.Find("Spaceship");
 
         my_score = transform.GetComponent<Text>();//取得
         my_score.text = " Total " + 0 ;

@@ -68,4 +68,9 @@ public class gameMnger : MonoBehaviour {
             rtn_num = installation_map[set_tag_name];
         return rtn_num;
     }
+
+    public void addInstallationTag(string add_tag_name , int set_start_data)
+    {
+        installation_map.Add(add_tag_name, set_start_data);
+    }
 }

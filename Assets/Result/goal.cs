@@ -59,10 +59,6 @@ public class goal : MonoBehaviour
                 //ゴールした！
                 goal_insect_num[i]++;
                 Destroy(collision.gameObject);
-                //消す処理
-                //pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
-                //GameObject.Find("gameUI").SetActive(false);
-                //Time.timeScale = 0f;
             }
         }
     }

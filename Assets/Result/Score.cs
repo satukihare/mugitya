@@ -16,13 +16,13 @@ public class Score : MonoBehaviour
     public int[] insect_goal = new int[5];         //ゴールした虫の数参照用
     public int insect_number;               //使いたい配列番号
 
-    int[] insect_score = {100,500,500,1000, 5000};    //各得点(ゴールした虫の数と一緒)
+    int[] insect_score = {10,50,100,200, 5000};    //各得点(ゴールした虫の数と一緒)
 
     // Start is called before the first frame update
     void Start()
     {
         //ゴールオブジェ取得
-        goal_obj = GameObject.Find("Cylinder");
+        goal_obj = GameObject.Find("Spaceship");
 
         //ゴールした数呼び出し
         for (int i = 0; i < insect_goal.Length; i++)
