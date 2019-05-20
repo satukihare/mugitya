@@ -2,33 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PadCheck : MonoBehaviour
-{
+public class PadCheck : MonoBehaviour {
     private KeyBoardMove KeyboardScript;
     private move MoveScript;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         KeyboardScript = this.GetComponentInChildren<KeyBoardMove>();
         MoveScript = this.GetComponentInChildren<move>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         var controllerNames = Input.GetJoystickNames();
 
         // 一台もコントローラが接続されていなければエラー
-        if (controllerNames[0] == "")
-        {
+        if (controllerNames[0] == "") {
             KeyboardScript.enabled = true;
             MoveScript.enabled = false;
         }
-        else
-        {
+        else {
             KeyboardScript.enabled = false;
             MoveScript.enabled = true;
         }
-            
+
     }
 }
