@@ -7,14 +7,21 @@ public class ChangeItem : MonoBehaviour
     private int equipment;
     private Transform FireObj;
     private Transform WindObj;
-
+    private gameMnger gameManager;
+    int Max_Wind;
+    int Max_Fire;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("gameMnger").GetComponent<gameMnger>();
         //　初期装備設定
         equipment = 0;
         FireObj = this.transform.Find("bonfireItem");
         WindObj = this.transform.Find("WindItem");
+        Max_Fire = 5;
+        Max_Wind = 5;
+        gameManager.addInstallationTag("fire", Max_Fire);
+        gameManager.addInstallationTag("wind", Max_Wind);
     }
 
     // Update is called once per frame
@@ -65,13 +72,17 @@ public class ChangeItem : MonoBehaviour
     {
         if (Input.GetButtonDown("B") || Input.GetKeyDown(KeyCode.Space))
         {
-            if (equipment == 1)
+            if (equipment == 1 && Max_Fire!=0)
             {
                 Instantiate((GameObject)Resources.Load("Prefabs/bonfire"), this.transform.position, Quaternion.identity);
+                Max_Fire--;
+                gameManager.setInstallationNums("fire", Max_Fire);
             }
-            if (equipment == 2)
+            if (equipment == 2 && Max_Wind != 0)
             {
                 Instantiate((GameObject)Resources.Load("Prefabs/Wind"), WindObj.transform.position, this.transform.rotation);
+                Max_Wind--;
+                gameManager.setInstallationNums("wind", Max_Wind);
             }
             equipment = 0;
         }

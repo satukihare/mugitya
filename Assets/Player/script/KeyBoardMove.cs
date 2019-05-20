@@ -67,9 +67,9 @@ public class KeyBoardMove : MonoBehaviour
             // カメラの水平回転(refCamera.hRotation)で回した移動方向(velocity)を足し込みます
             transform.position += refCamera.hRotation * velocity;
         }
-        if (this.transform.position.z <= GameObject.Find("Main Camera").transform.position.z + 12)
+        if (this.transform.position.z <= GameObject.Find("Main Camera").transform.position.z + 13)
         {
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 12);
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, GameObject.Find("Main Camera").transform.position.z + 13);
         }
     }
 

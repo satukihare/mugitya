@@ -216,7 +216,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a89c83fc76b941d47934ce68397d7455, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 612063873571399946}
   - component: {fileID: 612063873571399949}
   - component: {fileID: 612063873571399948}
+  - component: {fileID: 5600320270689626347}
   m_Layer: 0
   m_Name: Bee_AI
   m_TagString: bee
@@ -468,6 +469,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 612063873145140457}
   intervalSize: 0.2
+--- !u!114 &5600320270689626347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612063873571399947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6e98bd0864ada4fa6d8eea32adac0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612063873623570341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,11 +1333,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 612063873571399950}
     m_Modifications:
-    - target: {fileID: 7557930587193190224, guid: db848ef6b401fc44bb6be903f45a8527,
-        type: 3}
-      propertyPath: m_Name
-      value: bee
-      objectReference: {fileID: 0}
     - target: {fileID: 7557930587193190237, guid: db848ef6b401fc44bb6be903f45a8527,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1379,6 +1387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557930587193190224, guid: db848ef6b401fc44bb6be903f45a8527,
+        type: 3}
+      propertyPath: m_Name
+      value: bee
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db848ef6b401fc44bb6be903f45a8527, type: 3}

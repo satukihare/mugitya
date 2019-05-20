@@ -16,7 +16,7 @@ public class cameramove : MonoBehaviour
     {
         FadeManager.FadeIn();
         // 回転の初期化
-        vRotation = Quaternion.Euler(45, 0, 0);         // 垂直回転(X軸を軸とする回転)は、30度見下ろす回転
+        vRotation = Quaternion.Euler(30, 0, 0);         // 垂直回転(X軸を軸とする回転)は、30度見下ろす回転
         hRotation = Quaternion.identity;                // 水平回転(Y軸を軸とする回転)は、無回転
         transform.rotation = hRotation * vRotation;     // 最終的なカメラの回転は、垂直回転してから水平回転する合成回転
         gamepad = GameObject.Find("Pointer").GetComponent<GamePad>();
@@ -32,17 +32,7 @@ public class cameramove : MonoBehaviour
         {
             return;
         }
-        // 水平回転の更新
-        //if (Input.GetKey(KeyCode.Q) || gamepad.GetL1())
-        //{
-        //    hRotation *= Quaternion.Euler(0,-turnSpeed/5, 0);
-        //}
-        //if (Input.GetKey(KeyCode.E) || gamepad.GetR1())
-        //{
-        //    hRotation *= Quaternion.Euler(0, turnSpeed/5, 0);
-        //}
-        // カメラの回転(transform.rotation)の更新
-        // 方法1 : 垂直回転してから水平回転する合成回転とします
+
         transform.rotation = hRotation * vRotation;
 
         // カメラの位置(transform.position)の更新

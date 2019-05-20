@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6301644564521093445}
   - component: {fileID: 6301644564521093444}
   - component: {fileID: 6301644564521093447}
+  - component: {fileID: 1435405222300399394}
   m_Layer: 0
   m_Name: Spider_AI
   m_TagString: spider
@@ -48,7 +49,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -131,6 +132,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 6301644565756189439}
   intervalSize: 0.2
+--- !u!114 &1435405222300399394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6301644564521093441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6e98bd0864ada4fa6d8eea32adac0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6301644565164488088
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a89c83fc76b941d47934ce68397d7455, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

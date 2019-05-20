@@ -47,6 +47,7 @@ public class IconScript : MonoBehaviour
             }
             b = true;
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) { Application.Quit(); }
 
         if (IconPos == 0) { rect.localPosition = new Vector3(-255, -205, 0); }
         if (IconPos == 1) { rect.localPosition = new Vector3(-255, -365, 0); }

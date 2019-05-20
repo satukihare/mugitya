@@ -7,25 +7,32 @@ public class total_score : MonoBehaviour
 {
     public Text mae_score;    //前のスコア表示
     Text my_score;            //自分のスコア
-    int CountScore;
-    public GameObject goal_obj;             //ゴールオブジェ
-    int[] insect_goal = new int[5];         //ゴールした虫の数参照用
-    int[] insect_score = { 100, 500, 500, 1000, 5000 };    //各得点(ゴールした虫の数と一緒)
-    int total_score_ = 0;
+    int CountScore = 0;
+    GameObject goal_obj;             //ゴールオブジェ
+    public int[] insect_goal = new int[5];         //ゴールした虫の数参照用
+    public int[] insect_score = { 10, 50, 100, 200, 0 };    //各得点(ゴールした虫の数と一緒)
+    public int total_score_ = 0;
+    int get_Score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        goal_obj = GameObject.Find("Spaceship");
+
         my_score = transform.GetComponent<Text>();//取得
         my_score.text = " Total " + 0 ;
 
         //ゴールした数呼び出し
         for (int i = 0; i < insect_goal.Length; i++)
         {
+            get_Score = 0;
+
             insect_goal[i] = goal_obj.GetComponent<goal>().goal_insect_num[i];
 
             //合計得点計算
-            total_score_ += insect_goal[i] * insect_score[i]; 
+            get_Score= insect_goal[i] * insect_score[i];
+
+            total_score_ += get_Score;
         }
         
     }
@@ -38,10 +45,10 @@ public class total_score : MonoBehaviour
 
             if (CountScore < total_score_)
             {
-                CountScore += 100;
+                CountScore +=10;
             }
 
-            my_score.text = " Total " + CountScore.ToString();
+            my_score.text = " Total " + CountScore;
         }
     }
 }
