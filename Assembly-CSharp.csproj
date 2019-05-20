@@ -68,6 +68,8 @@
     <Compile Include="Assets\Enemy\HitSearchErea.cs" />
     <Compile Include="Assets\Enemy\Spider\Spider_yarn\SpiderYarn.cs" />
     <Compile Include="Assets\Field\script\Switch.cs" />
+    <Compile Include="Assets\fireWall\script\ControlFireWall.cs" />
+    <Compile Include="Assets\fireWall\script\fire_obj_child.cs" />
     <Compile Include="Assets\GameMnger\script\gameMnger.cs" />
     <Compile Include="Assets\GUI\BugCount.cs" />
     <Compile Include="Assets\GUI\script\NumRender.cs" />
