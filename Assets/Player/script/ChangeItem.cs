@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ChangeItem : MonoBehaviour
@@ -18,8 +19,18 @@ public class ChangeItem : MonoBehaviour
         equipment = 0;
         FireObj = this.transform.Find("bonfireItem");
         WindObj = this.transform.Find("WindItem");
-        Max_Fire = 5;
-        Max_Wind = 5;
+        int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneindex == 1)//ステージ①のアイテム数設定
+        {
+            Max_Fire = 10;
+            Max_Wind = 5;
+        }
+        if (currentSceneindex == 2)//ステージ①のアイテム数設定
+        {
+            Max_Fire = 2;
+            Max_Wind = 5;
+        }
+
         gameManager.addInstallationTag("fire", Max_Fire);
         gameManager.addInstallationTag("wind", Max_Wind);
     }
@@ -30,6 +41,7 @@ public class ChangeItem : MonoBehaviour
         Change();
 
         Setting();
+       
     }
 
     private void Change()
