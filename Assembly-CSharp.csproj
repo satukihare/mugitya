@@ -68,6 +68,7 @@
     <Compile Include="Assets\camera\cameramove.cs" />
     <Compile Include="Assets\Enemy\HitSearchErea.cs" />
     <Compile Include="Assets\Enemy\Spider\Spider_yarn\SpiderYarn.cs" />
+    <Compile Include="Assets\Enemy\UseSearchMark.cs" />
     <Compile Include="Assets\Field\script\Switch.cs" />
     <Compile Include="Assets\fireWall\script\ControlFireWall.cs" />
     <Compile Include="Assets\fireWall\script\fire_obj_child.cs" />
