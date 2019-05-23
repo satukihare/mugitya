@@ -1341,6 +1341,18 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0017830525, y: -0.0012509392, z: 0.0033682794}
     m_Extent: {x: 0.0004884172, y: 0.0004884172, z: 0.0004857555}
   m_DirtyAABB: 0
+--- !u!114 &263445382464379468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7051431020989972443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d8f33b8bce1354f9b17ba1c2b7ff82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3359307526758131387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1640,6 +1652,12 @@ PrefabInstance:
 --- !u!224 &3488630686901919953 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 27334587133172875, guid: f97bd80d7e9bee64289717d459a7d723,
+    type: 3}
+  m_PrefabInstance: {fileID: 3461869026936323162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7051431020989972443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5895406175833392001, guid: f97bd80d7e9bee64289717d459a7d723,
     type: 3}
   m_PrefabInstance: {fileID: 3461869026936323162}
   m_PrefabAsset: {fileID: 0}

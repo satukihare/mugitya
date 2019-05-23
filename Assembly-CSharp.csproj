@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
     <Compile Include="Assets\Spider\Script\SpiderSrc.cs" />
     <Compile Include="Assets\Spider\SpiderMove.cs" />
+    <Compile Include="Assets\system\BillBoard.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
     <Compile Include="Assets\system\HitFire.cs" />
     <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
