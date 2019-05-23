@@ -11,6 +11,8 @@ public class cameramove : MonoBehaviour
     private float distance = 55.0f;                     // 注視対象プレイヤーからカメラを離す距離
     //private GameObject Player;
     private GamePad gamepad;
+    public AudioSource audioSource;
+
 
     void Start()
     {
@@ -24,6 +26,8 @@ public class cameramove : MonoBehaviour
         // player位置から距離distanceだけ手前に引いた位置を設定します
         transform.position = player.position - transform.rotation * Vector3.forward * distance;
         //Player = GameObject.Find("Pointer");
+        audioSource = this.GetComponent<AudioSource>();
+        audioSource.Play();
     }
 
     void LateUpdate()
