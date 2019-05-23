@@ -2027,7 +2027,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mae_score: {fileID: 8931231114003285745}
-  goal_obj: {fileID: 0}
   insect_goal: 0000000000000000000000000000000000000000
   insect_score: 0a0000003200000064000000c800000000000000
   total_score_: 0
