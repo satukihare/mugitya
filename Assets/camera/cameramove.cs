@@ -51,7 +51,7 @@ public class cameramove : MonoBehaviour
         transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + 0.03f);
 
 
-        if(this.transform.position.z>=GameObject.Find("Spaceship").transform.position.z-40 && Is_ResultOn == false)
+        if(this.transform.position.z>=GameObject.Find("Spaceship").transform.position.z-30 && Is_ResultOn == false)
         {
             Is_ResultOn = true;
             pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
