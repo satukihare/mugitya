@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/ginta/Desktop/mugitya/Flower&Insects.exe
+C:/Users/satukihare/Desktop/mugicha/Flower&Insects.exe
 SceneListBegin?
 Assets/Scenes/TitleScene.unity
 Assets/Scenes/Game.unity
