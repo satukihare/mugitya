@@ -12,7 +12,12 @@ public class cameramove : MonoBehaviour
     //private GameObject Player;
     private GamePad gamepad;
     public AudioSource audioSource;
-
+    [SerializeField]
+    //　ポーズした時に表示するUIのプレハブ
+    private GameObject pauseUIPrefab;
+    //　ポーズUIのインスタンス
+    private GameObject pauseUIInstance;
+    public bool Is_ResultOn;
 
     void Start()
     {
@@ -28,6 +33,7 @@ public class cameramove : MonoBehaviour
         //Player = GameObject.Find("Pointer");
         audioSource = this.GetComponent<AudioSource>();
         audioSource.Play();
+        Is_ResultOn = false;
     }
 
     void LateUpdate()
@@ -42,6 +48,15 @@ public class cameramove : MonoBehaviour
         // カメラの位置(transform.position)の更新
         // player位置から距離distanceだけ手前に引いた位置を設定します(位置補正版)
         //transform.position = player.position + new Vector3(0, 5, 0) - transform.rotation * Vector3.forward * distance;
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + 0.02f);
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + 0.03f);
+
+
+        if(this.transform.position.z>=GameObject.Find("Spaceship").transform.position.z-40 && Is_ResultOn == false)
+        {
+            Is_ResultOn = true;
+            pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
+            GameObject.Find("gameUI").SetActive(false);
+            Time.timeScale = 0f;
+        }
     }
 }

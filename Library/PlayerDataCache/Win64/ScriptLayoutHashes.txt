@@ -60,6 +60,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
+cbeba0be93684d3bcd4b72542d830f58 Assembly-CSharp.dll:.AudioPlayer
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -125,12 +126,13 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 96203ad4f86b816720573a56aa92b439 Assembly-CSharp.dll:.OrderPointer
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UseSearchMark
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 d03883a76a1702ccb79957be4fa46516 Assembly-CSharp.dll:.next_result
 4ceb68650a67de55d63b1e4c103c85d4 Assembly-CSharp.dll:.totalScore
 25a8193461977a85c9bd1a6833211069 Assembly-CSharp.dll:.GamePad
-b9b86dab7767436b8958ee1421267646 Assembly-CSharp.dll:.total_score
+5348195979a43f151dde4bdd71630318 Assembly-CSharp.dll:.total_score
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PadCheck
 68a6d5364894cdd40c61944641d1464f Assembly-CSharp.dll:.SetItem
@@ -163,7 +165,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 b7bcfab859b1fb9a0fac0e80443c7c97 Assembly-CSharp.dll:.HitSearchErea
-ebcbc8c4d08a0364914587d586b2555a Assembly-CSharp.dll:.cameramove
+7fdc85457fcbcbe84b6c4988afd333d2 Assembly-CSharp.dll:.cameramove
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AntMove
 315eff16b4669acdc68a08e607e873a0 Assembly-CSharp.dll:.SpiderYarn
 cf96e5f7b3d069bab453925bd41be04e UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
@@ -180,10 +182,14 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.FadeManager
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.fire_obj_child
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+d6ab8018023ee156603dfa422750a2c6 Assembly-CSharp.dll:.PlaySE
+6c84ced75e99da861adc8d4fd54720ff Assembly-CSharp.dll:.TrapNumRender
 314cf4ac4021b160f0664a366d79e4f6 Assembly-CSharp.dll:.KeyBoardMove
+ad6869c22f49eec0ad3a905c91f1d8cd Assembly-CSharp.dll:.ControlFireWall
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.WindVector
 6c84ced75e99da861adc8d4fd54720ff Assembly-CSharp.dll:.NumRender
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
@@ -196,3 +202,4 @@ c4b36f778ee01142a93f900e35d3958d Assembly-CSharp.dll:.RotatingTheSun
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BeeMove
 23ec7bd056d46ba92a23284ffa01a500 Assembly-CSharp.dll:.TitleBGM
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AntWalk_title
+4d6e960e3e9b5a547f0b70f0c8662275 Assembly-CSharp.dll:.displayEffectScript
