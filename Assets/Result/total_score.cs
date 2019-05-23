@@ -48,7 +48,7 @@ public class total_score : MonoBehaviour
                 CountScore +=10;
             }
 
-            my_score.text = " Total " + CountScore;
+            my_score.text = CountScore.ToString();
         }
     }
 }
