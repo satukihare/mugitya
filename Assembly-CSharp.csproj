@@ -77,6 +77,7 @@
     <Compile Include="Assets\GUI\script\NumRender.cs" />
     <Compile Include="Assets\GUI\script\totalScore.cs" />
     <Compile Include="Assets\GUI\script\TrapNumRender.cs" />
+    <Compile Include="Assets\Player\PlaySE.cs" />
     <Compile Include="Assets\Player\script\ChangeItem.cs" />
     <Compile Include="Assets\Player\script\KeyBoardMove.cs" />
     <Compile Include="Assets\Player\script\move.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Result\total_score.cs" />
     <Compile Include="Assets\Scenes\FadeManager\FadeManager.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\AntWalk_title.cs" />
+    <Compile Include="Assets\Scenes\TitleScene\Script\AudioPlayer.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\BeeTurn.cs" />
     <Compile Include="Assets\Scenes\TitleScene\Script\IconScript.cs" />
     <Compile Include="Assets\Spider\Script\SpiderSrc.cs" />
