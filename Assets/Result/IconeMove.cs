@@ -53,14 +53,14 @@ public class IconeMove : MonoBehaviour
         if (IconPos == 1) { rect.localPosition = new Vector3(95, -160, 0); }
 
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex+1;//現在のシーン番号を取得
-
+        
         Debug.Log(currentSceneindex);
         if (IconPos == 1)
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
             {
                 Time.timeScale = 1f;
-                if (currentSceneindex > 2)
+                if (currentSceneindex > 3)
                 {
                     FadeManager.FadeOut(0);
                 }

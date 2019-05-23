@@ -20,15 +20,21 @@ public class ChangeItem : MonoBehaviour
         FireObj = this.transform.Find("bonfireItem");
         WindObj = this.transform.Find("WindItem");
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneindex == 1)//ステージ①のアイテム数設定
+        if (currentSceneindex == 1)//チュートリアルステージのアイテム数設定
         {
-            Max_Fire = 8;
+            Max_Fire = 99;
+            Max_Wind = 99;
+        }
+        if (currentSceneindex == 2)//ステージ①のアイテム数設定
+        {
+            Max_Fire = 5;
             Max_Wind = 5;
         }
-        if (currentSceneindex == 2)//ステージ2のアイテム数設定
+        if (currentSceneindex == 3)//ステージ2のアイテム数設定
         {
-            Max_Fire = 2;
-            Max_Wind = 5;
+            Max_Fire = 15;
+            Max_Wind = 15;
+            
         }
 
         gameManager.addInstallationTag("fire", Max_Fire);
