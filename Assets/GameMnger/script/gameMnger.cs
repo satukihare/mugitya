@@ -11,17 +11,17 @@ public class gameMnger : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         //虫のデータマップに予めタグと値をセット
-        bug_nums_map.Add("bug_all_num", 0);
-        bug_nums_map.Add("ant", 0);
-        bug_nums_map.Add("bee", 0);
-        bug_nums_map.Add("spider", 0);
-        bug_nums_map.Add("mantis", 0);
-        bug_nums_map.Add("hornet", 0);
-        bug_nums_map.Add("locust", 0);
+        addInstallationTag("bug_all_num", 0);
+        addInstallationTag("ant", 0);
+        addInstallationTag("bee", 0);
+        addInstallationTag("spider", 0);
+        addInstallationTag("mantis", 0);
+        addInstallationTag("hornet", 0);
+        addInstallationTag("locust", 0);
 
         //設置物に予めタグと値をセット
-        installation_map.Add("wind", 0);
-        installation_map.Add("fire", 0);
+        addInstallationTag("wind", 0);
+        addInstallationTag("fire", 0);
     }
 
     // Update is called once per frame
@@ -69,8 +69,12 @@ public class gameMnger : MonoBehaviour {
         return rtn_num;
     }
 
-    public void addInstallationTag(string add_tag_name , int set_start_data)
-    {
-        installation_map.Add(add_tag_name, set_start_data);
+    //タグを追加する
+    public void addInstallationTag(string add_tag_name, int set_start_data) {
+
+        if (!installation_map.ContainsKey(add_tag_name))
+            installation_map.Add(add_tag_name, set_start_data);
+        else
+            installation_map[add_tag_name] = set_start_data;
     }
 }
