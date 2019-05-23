@@ -16,14 +16,14 @@ public class PadCheck : MonoBehaviour {
         var controllerNames = Input.GetJoystickNames();
 
         // 一台もコントローラが接続されていなければエラー
-        if (controllerNames[0] == "") {
-            KeyboardScript.enabled = true;
+        if(controllerNames.Length == 0) {
+           KeyboardScript.enabled = true;
             MoveScript.enabled = false;
         }
         else {
             KeyboardScript.enabled = false;
             MoveScript.enabled = true;
         }
-
+        
     }
 }
