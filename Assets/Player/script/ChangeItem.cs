@@ -22,10 +22,10 @@ public class ChangeItem : MonoBehaviour
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
         if (currentSceneindex == 1)//ステージ①のアイテム数設定
         {
-            Max_Fire = 10;
+            Max_Fire = 8;
             Max_Wind = 5;
         }
-        if (currentSceneindex == 2)//ステージ①のアイテム数設定
+        if (currentSceneindex == 2)//ステージ2のアイテム数設定
         {
             Max_Fire = 2;
             Max_Wind = 5;
