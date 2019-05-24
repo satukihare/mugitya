@@ -11,6 +11,8 @@ public class goal : MonoBehaviour
     private GameObject pauseUIInstance;
 
     private BugCount bugCountScript;
+    //ゲームマネージャ
+    public gameMnger game_mnger;
 
     //各虫のゴールした数用
     //[虫のゴールした数]
@@ -59,6 +61,7 @@ public class goal : MonoBehaviour
                 //ゴールした！
                 goal_insect_num[i]++;
                 Destroy(collision.gameObject);
+                game_mnger.incrementGoalBugNums(goal_insect_name[i]);
             }
         }
     }

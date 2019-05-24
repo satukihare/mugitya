@@ -21,10 +21,11 @@ public class totalScore : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        int tatal_score = (game_mnger.getBugNums("ant") * ant_point) +
-            (game_mnger.getBugNums("bee") * bee_point) +
-            (game_mnger.getBugNums("locust") * locust_point) +
-            (game_mnger.getBugNums("spider") * spider_point);
+        int tatal_score =
+            (game_mnger.getGoalBugNums("ant") * ant_point) +
+            (game_mnger.getGoalBugNums("bee") * bee_point) +
+            (game_mnger.getGoalBugNums("locust") * locust_point) +
+            (game_mnger.getGoalBugNums("spider") * spider_point);
         //テキストにセット
         text_obj.text = tatal_score.ToString();
     }
