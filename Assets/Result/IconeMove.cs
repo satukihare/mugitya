@@ -60,7 +60,7 @@ public class IconeMove : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
             {
                 Time.timeScale = 1f;
-                if (currentSceneindex > 3)
+                if (currentSceneindex > 4)
                 {
                     FadeManager.FadeOut(0);
                 }

@@ -32,9 +32,15 @@ public class ChangeItem : MonoBehaviour
         }
         if (currentSceneindex == 3)//ステージ2のアイテム数設定
         {
+            Max_Fire = 10;
+            Max_Wind = 10;
+            
+        }
+        if (currentSceneindex == 4)//ステージ2のアイテム数設定
+        {
             Max_Fire = 15;
             Max_Wind = 15;
-            
+
         }
 
         gameManager.addInstallationTag("fire", Max_Fire);
