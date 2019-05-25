@@ -13,7 +13,7 @@ public class Wind : MonoBehaviour
     {
         RotY = 0;
         coefficient = 10.0f;
-        WindSpeed = 20.0f;
+        WindSpeed = 10.0f;
     }
 
     void Update()

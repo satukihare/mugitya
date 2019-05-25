@@ -31,9 +31,14 @@ public class HitSearchErea : MonoBehaviour
         }
         return false;
     }
+
+    public bool getInErea()
+    {
+        return bInErea;
+    }
     
     //　エリアに侵入
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         foreach (string _name in nameStr)
         {
@@ -47,8 +52,14 @@ public class HitSearchErea : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
+
     //エリアから脱出
-    void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         bTouchErea = false;
         bInErea = false;
