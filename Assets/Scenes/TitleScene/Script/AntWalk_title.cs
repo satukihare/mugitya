@@ -24,7 +24,7 @@ public class AntWalk_title : MonoBehaviour
                                               this.transform.position.y + TargetPos.y * Movespeed,
                                               this.transform.position.z + TargetPos.z * Movespeed);
 
-        if(this.transform.position.z<=10)
+        if(this.transform.position.z<=5)
         {
             this.transform.position = new Vector3(this.transform.position.x,
                                                   this.transform.position.y,

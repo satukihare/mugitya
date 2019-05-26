@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4620044887518255772}
   - component: {fileID: 1223708482867828774}
   - component: {fileID: 7373275396126702374}
+  - component: {fileID: 1378198149948749636}
   m_Layer: 5
   m_Name: cursorImage
   m_TagString: Untagged
@@ -58,10 +59,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e27a542f6803784ca13e69dafd006f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game_pad: {fileID: 0}
+  game_pad: {fileID: 1378198149948749636}
   img_obj:
   - {fileID: 6362010268208592800}
   - {fileID: 6362010269200375083}
+  cursor_move_num: 0.2
 --- !u!114 &7373275396126702374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +93,33 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1378198149948749636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739469402726035846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3584e45ac4d80498010f81522846de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftStickX: 0
+  LeftStickY: 0
+  RightStickX: 0
+  RightStickY: 0
+  DirectionKeyX: 0
+  DirectionKeyY: 0
+  Is_OnL1: 0
+  Is_OnL2: 0
+  Is_OnR1: 0
+  Is_OnR2: 0
+  Is_OnCross: 0
+  Is_OnCircle: 0
+  Is_OnSquare: 0
+  Is_OnTriangle: 0
+  Is_OnMenu: 0
 --- !u!1 &6362010267440458157
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010267541792418}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!114 &6362010267520235212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,7 +649,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010268936034068}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!114 &6362010267548394306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6362010267578417964}
   - component: {fileID: 6362010267578417965}
+  - component: {fileID: 1540032474902909517}
   m_Layer: 5
   m_Name: pauseControl
   m_TagString: Untagged
@@ -697,8 +729,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f871411e055d2314c886261aa404d0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GamePad: {fileID: 0}
+  game_pad: {fileID: 1540032474902909517}
   pouse_ui: {fileID: 6362010268708319412}
+  cursor: {fileID: 1223708482867828774}
+--- !u!114 &1540032474902909517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362010267578417967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3584e45ac4d80498010f81522846de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftStickX: 0
+  LeftStickY: 0
+  RightStickX: 0
+  RightStickY: 0
+  DirectionKeyX: 0
+  DirectionKeyY: 0
+  Is_OnL1: 0
+  Is_OnL2: 0
+  Is_OnR1: 0
+  Is_OnR2: 0
+  Is_OnCross: 0
+  Is_OnCircle: 0
+  Is_OnSquare: 0
+  Is_OnTriangle: 0
+  Is_OnMenu: 0
 --- !u!1 &6362010267612535964
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010267612535963}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!114 &6362010268139324874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,7 +1032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010269545975539}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!1 &6362010268208592800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010267440458152}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!114 &6362010268429315592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,7 +1257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010269271511462}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!114 &6362010268481052206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,7 +1537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010268982063375}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!114 &6362010268608888643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,7 +1656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010268702289153}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
 --- !u!1 &6362010268708319412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +2296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 6362010268552820972}
-  game_mnger: {fileID: 0}
+  game_mnger: {fileID: 8677739673267163193, guid: 8a241b8c886d41e4680d61fd00223167,
+    type: 3}
   ant_point: 10
   bee_point: 50
   locust_point: 100

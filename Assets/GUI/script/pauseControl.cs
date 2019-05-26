@@ -49,7 +49,7 @@ public class pauseControl : MonoBehaviour {
     private void pauseActionCheck() {
 
         //決定Buttonが押されたら
-        if (Input.GetKeyDown(KeyCode.Return) || game_pad.GetCircle()) {
+        if (Input.GetKeyDown(KeyCode.Space) || game_pad.GetCircle()) {
             //cursorの位置
             int cursor_pos_num = cursor.getCursorPosision();
 
