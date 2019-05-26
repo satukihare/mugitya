@@ -18,6 +18,7 @@ public class GamePad : MonoBehaviour
     public bool Is_OnCircle;
     public bool Is_OnSquare;
     public bool Is_OnTriangle;
+    public bool Is_OnMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,8 @@ public class GamePad : MonoBehaviour
         if (Input.GetButtonDown("R1")) { Is_OnR1 = true; }
         if (Input.GetButtonUp("L1")) { Is_OnL1 = false; }
         if (Input.GetButtonUp("R1")) { Is_OnR1 = false; }
+        if (Input.GetButtonDown("Menu")) { Is_OnMenu = true; }
+        if (Input.GetButtonUp("Menu")) { Is_OnMenu = false; }
 
     }
 
@@ -67,4 +70,5 @@ public class GamePad : MonoBehaviour
     public float GetRightStickY() { return RightStickY; }
     public float GetDirectionKeyX() { return DirectionKeyX; }
     public float GetDirectionKeyY() { return DirectionKeyY; }
+    public bool GetMenuButton() { return Is_OnMenu; }
 }
