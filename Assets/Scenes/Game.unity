@@ -687,6 +687,11 @@ PrefabInstance:
       propertyPath: game_mnger
       value: 
       objectReference: {fileID: 322365112}
+    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: cursor_move_num
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4452703872150012617, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: m_Name
