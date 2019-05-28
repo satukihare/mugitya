@@ -26,8 +26,8 @@ public class BugCount : MonoBehaviour
             Check("ant");
             Check("bee");
             Check("spider");
-            Check("locust");
-            totalBug = Check("ant") + Check("bee") + Check("spider")-3;
+            Check("flower");
+            totalBug = Check("ant") + Check("bee") + Check("spider")+Check("locust")-4;
             timer = 0;
         }
         gameManager.setBugNums("ant", Check("ant") - 1);

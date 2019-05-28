@@ -18,6 +18,7 @@ TagManager:
   - rock
   - touboku
   - Bug
+  - flower
   layers:
   - Default
   - TransparentFX
