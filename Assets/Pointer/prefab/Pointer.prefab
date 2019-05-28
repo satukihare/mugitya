@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10441,6 +10441,7 @@ MonoBehaviour:
   Is_OnCircle: 0
   Is_OnSquare: 0
   Is_OnTriangle: 0
+  Is_OnMenu: 0
 --- !u!114 &6705355072207754767
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,8 +49,8 @@ public class IconeMove : MonoBehaviour
             b = true;
         }
 
-        if (IconPos == 0) { rect.localPosition = new Vector3(95, -84, 0); }
-        if (IconPos == 1) { rect.localPosition = new Vector3(95, -160, 0); }
+        if (IconPos == 0) { rect.localPosition = new Vector3(40, -24, 0); }
+        if (IconPos == 1) { rect.localPosition = new Vector3(40, -100, 0); }
 
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex+1;//現在のシーン番号を取得
         

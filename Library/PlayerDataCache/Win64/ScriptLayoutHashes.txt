@@ -1,10 +1,12 @@
 Win64
 PlayerPath?
-C:/Users/satukihare/Desktop/mugicha/Flower&Insects.exe
+C:/Users/ginta/Desktop/mugitya/Flower&Insects.exe
 SceneListBegin?
 Assets/Scenes/TitleScene.unity
-Assets/Scenes/Game.unity
+Assets/Scenes/TutorialStage2.unity
+Assets/Scenes/Stage1.unity
 Assets/Scenes/Stage2.unity
+Assets/Scenes/Game.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 4634bea224d7ff4565ab0ba6708f7562 Assembly-CSharp.dll:.BeeScr
@@ -62,6 +64,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
 cbeba0be93684d3bcd4b72542d830f58 Assembly-CSharp.dll:.AudioPlayer
+72511a48f9d9234427b71b01714b07b9 Assembly-CSharp.dll:.cursorMove
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -94,7 +97,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-84a3455e66311dec5b8f395d130ddec6 Assembly-CSharp.dll:.goal
+d535c01e16270bab6f1a99a43febe73b Assembly-CSharp.dll:.goal
 4634bea224d7ff4565ab0ba6708f7562 Assembly-CSharp.dll:.SpiderSrc
 4634bea224d7ff4565ab0ba6708f7562 Assembly-CSharp.dll:.AntScr
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SpiderMove
@@ -132,7 +135,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 d03883a76a1702ccb79957be4fa46516 Assembly-CSharp.dll:.next_result
 4ceb68650a67de55d63b1e4c103c85d4 Assembly-CSharp.dll:.totalScore
-25a8193461977a85c9bd1a6833211069 Assembly-CSharp.dll:.GamePad
+84845bd9d5e6660820c5a784dd8cc31a Assembly-CSharp.dll:.GamePad
 5348195979a43f151dde4bdd71630318 Assembly-CSharp.dll:.total_score
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PadCheck
@@ -183,6 +186,8 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.FadeManager
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BillBoard
+4634bea224d7ff4565ab0ba6708f7562 Assembly-CSharp.dll:.Flower_AI
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.fire_obj_child
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
@@ -196,6 +201,7 @@ d5384b2880d135f0cd799826757d743b Assembly-CSharp.dll:.ControlFireWall
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HitFire
 fba58c5d75987b706dfeaff089d18f67 Assembly-CSharp.dll:.IconeMove
+8f7dade768f98cd9af917ae5b0f0fd9e Assembly-CSharp.dll:.pauseControl
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 c4b36f778ee01142a93f900e35d3958d Assembly-CSharp.dll:.RotatingTheSun
