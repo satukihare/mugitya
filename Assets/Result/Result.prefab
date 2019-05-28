@@ -164,7 +164,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 1c825802c6ce48b4ea6733f8c084c330, type: 3}
   m_Type: 0
+<<<<<<< HEAD
   m_PreserveAspect: 0
+=======
+  m_PreserveAspect: 1
+>>>>>>> 635e00a028f0a7b41059b218ff9fb179d91fd437
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
