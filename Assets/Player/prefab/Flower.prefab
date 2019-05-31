@@ -4941,6 +4941,7 @@ GameObject:
   - component: {fileID: 8644542850854035686}
   - component: {fileID: 8811920747266983681}
   - component: {fileID: 8811920747266983689}
+  - component: {fileID: 2690037963953725808}
   m_Layer: 0
   m_Name: Flower
   m_TagString: locust
@@ -5119,6 +5120,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 8811920745931194184}
   intervalSize: 0.2
+--- !u!114 &2690037963953725808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644542850854035687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6e98bd0864ada4fa6d8eea32adac0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8644542850925031628
 GameObject:
   m_ObjectHideFlags: 0
