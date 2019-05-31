@@ -19,6 +19,7 @@ public class HitSearchErea : MonoBehaviour
 
     void Update()
     {
+
     }
 
     // 情報を親へ渡すためのGetter
@@ -35,6 +36,7 @@ public class HitSearchErea : MonoBehaviour
     public bool getInErea()
     {
         return bInErea;
+        
     }
     
     //　エリアに侵入
