@@ -42,7 +42,7 @@ public class pauseControl : MonoBehaviour {
 
         //ポーズボタン判定が押されたたら止まる
         if (game_pad.GetMenuButton() || Input.GetKeyDown(KeyCode.Escape)) {
-            pause_mode_flg = pause_mode_flg ? false : true;
+            pause_mode_flg = true;
         }
     }
 
