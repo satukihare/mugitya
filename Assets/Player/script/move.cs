@@ -19,6 +19,8 @@ public class move : MonoBehaviour
     private GamePad gamepad;
     public int Life;
     bool YarnHit;
+    int Speed = 3;
+    bool SpeedMagnification;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class move : MonoBehaviour
         YarnHit = false;
         RotY = 0;
         //rb.constraints = RigidbodyConstraints.FreezeAll;
+        SpeedMagnification = false;
     }
 
     void Update()
@@ -68,12 +71,42 @@ public class move : MonoBehaviour
             Velocity.z += LeftStickY;
         }
         RotY += RightStickX*2;
+
+
+        //カーソルスピード変更
+        if (gamepad.GetL2() == false)
+        {
+            Speed = 3;
+        }
+        if (gamepad.GetL2() == true)
+        {
+            Speed = 5;
+        }
+
+        //ゲーム進行速度変更
+        if (gamepad.GetR2() == false)
+        {
+           SpeedMagnification = false;
+        }
+        if (gamepad.GetR2() == true)
+        {
+            SpeedMagnification = true;
+        }
+        if (SpeedMagnification == false)
+        {
+            Time.timeScale = 1f;
+        }
+        if (SpeedMagnification == true)
+        {
+            Time.timeScale = 2f;
+        }
+
     }
 
     void Transform()
     {
         // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
-        Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime*3;
+        Velocity = Velocity.normalized * MoveSpeed * Time.deltaTime * Speed;
 
         //向き調整
         this.transform.rotation = Quaternion.Euler(0, RotY, 0);

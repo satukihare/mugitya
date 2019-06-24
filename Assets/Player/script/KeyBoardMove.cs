@@ -11,6 +11,8 @@ public class KeyBoardMove : MonoBehaviour
     Rigidbody rb;
     bool YarnHit;
     float RotY;
+    int Speed = 3;
+    bool SpeedMagnification;
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class KeyBoardMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         RotY = 0;
         //rb.constraints = RigidbodyConstraints.FreezeAll;
+        SpeedMagnification = false;
     }
     void Update()
     {
@@ -48,14 +51,49 @@ public class KeyBoardMove : MonoBehaviour
         {
             RotY += 2;
         }
-            
-       
+        //K長押しで加速
+        //K放すと戻る
+        if(Input.GetKey(KeyCode.K))
+        {
+            Speed = 5;
+        }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            Speed = 3;
+        }
+
+        //ゲーム進行速度変更
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            switch(SpeedMagnification)
+            {
+                case false:
+                    SpeedMagnification = true;
+                    break;
+                case true:
+                    SpeedMagnification = false;
+                    break;
+            }
+            //Debug.Log(SpeedMagnification);
+        }
+        if (SpeedMagnification == false)
+        {
+            Time.timeScale = 1f;
+        }
+        if (SpeedMagnification == true)
+        {
+            Time.timeScale = 2f;
+        }
+
+
+
+
     }
 
     void Transform()
     {
         // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
-        velocity = velocity.normalized * moveSpeed * Time.deltaTime * 3;
+        velocity = velocity.normalized * moveSpeed * Time.deltaTime * Speed;
 
         //向き調整
         this.transform.rotation = Quaternion.Euler(0, RotY, 0);

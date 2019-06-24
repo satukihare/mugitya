@@ -108,7 +108,7 @@ public class ChangeItem : MonoBehaviour
                 Max_Wind--;
                 gameManager.setInstallationNums("wind", Max_Wind);
             }
-            equipment = 0;
+            //equipment = 0;
         }
     }
 }
