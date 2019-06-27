@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514283, g: 0.5006544, b: 0.57090706, a: 1}
+  m_IndirectSpecularColor: {r: 0.45142835, g: 0.50065446, b: 0.57090706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3384,6 +3384,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: gameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: game_pad
+      value: 
+      objectReference: {fileID: 1967799114}
+    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: cursor_move_num
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6362010268943469564, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3697,6 +3707,11 @@ PrefabInstance:
     - target: {fileID: 6362010267612535965, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362010267612535965, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6362010268936034070, guid: e6aa122307404ae488e81edddf162571,
@@ -4014,16 +4029,6 @@ PrefabInstance:
       propertyPath: game_pad
       value: 
       objectReference: {fileID: 1967799114}
-    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: game_pad
-      value: 
-      objectReference: {fileID: 1967799114}
-    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: cursor_move_num
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1540032474902909517, guid: e6aa122307404ae488e81edddf162571, type: 3}
     - {fileID: 1378198149948749636, guid: e6aa122307404ae488e81edddf162571, type: 3}
