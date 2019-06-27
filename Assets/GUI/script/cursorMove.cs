@@ -19,7 +19,7 @@ public class cursorMove : MonoBehaviour {
     private bool pad_move_flg = false;
 
     //cursor移動量
-    public float cursor_move_num = 0.2f;
+    public float cursor_move_num = 30.0f;
 
     // Start is called before the first frame update
     void Start() {
