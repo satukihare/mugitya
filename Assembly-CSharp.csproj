@@ -78,6 +78,7 @@
     <Compile Include="Assets\GameMnger\script\gameMnger.cs" />
     <Compile Include="Assets\GUI\BugCount.cs" />
     <Compile Include="Assets\GUI\script\cursorMove.cs" />
+    <Compile Include="Assets\GUI\script\double_speed_script.cs" />
     <Compile Include="Assets\GUI\script\NumRender.cs" />
     <Compile Include="Assets\GUI\script\pauseControl.cs" />
     <Compile Include="Assets\GUI\script\totalScore.cs" />
