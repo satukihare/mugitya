@@ -1213,11 +1213,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8912769340154414078, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.4619141
-      objectReference: {fileID: 0}
     - target: {fileID: 3863087460285495078, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1237,6 +1232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912769340154414078, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.4619141
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6aa122307404ae488e81edddf162571, type: 3}
@@ -8318,6 +8318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: displayEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 966500301818921451, guid: ae7abfe00934853489d58be5d184491f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 966500301818921454, guid: ae7abfe00934853489d58be5d184491f,
         type: 3}
