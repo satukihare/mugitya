@@ -549,6 +549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 6923020499420780812}
   intervalSize: 0.2
+  intervalPos: 0.2
+  intervalFlame: 60
 --- !u!114 &6923020498023701202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,18 +768,6 @@ Transform:
   m_Father: {fileID: 1588134779026071150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3545336568055563621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7339751281885025515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d8f33b8bce1354f9b17ba1c2b7ff82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6923020499420780800
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +845,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3545336568055563621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339751281885025515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d8f33b8bce1354f9b17ba1c2b7ff82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3750575216540522346
 PrefabInstance:
   m_ObjectHideFlags: 0

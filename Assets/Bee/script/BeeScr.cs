@@ -14,6 +14,12 @@ public class BeeScr : MonoBehaviour
     private bool bEreaIn;
     private Vector3 frontVec;                       // 前情報
 
+    private Vector3 beforePos = new Vector3(0, 0, 0);         // 前フレームの位置
+    private int stopCount;                                  // 止まったフレームをカウント
+    [SerializeField] private float intervalPos;             // 位置誤差
+    [SerializeField] private int intervalFlame;             // 静止フレーム誤差 
+    private float vecFront_Height = 0.15f;
+
 
     void Start()
     {
@@ -46,6 +52,13 @@ public class BeeScr : MonoBehaviour
         {
 
         }
+
+        // 止まっている状態のカウンタ
+        stopMoveCount();
+        // 壁への対応処理
+        turnStopWall();
+
+        //前ベクトルの位置更新
         agent.destination = point.position;
     }
 
@@ -111,5 +124,42 @@ public class BeeScr : MonoBehaviour
     {
         //Debug.Log(frontVec.normalized);
         transform.GetChild(1).gameObject.transform.position = this.transform.position + frontVec.normalized * intervalSize * 50;
+    }
+
+    // 静止フレームカウント
+    private void stopMoveCount()
+    {
+        Vector3 _nowpos = this.transform.position;
+        // 位置更新をしているか
+        if (_nowpos.x > beforePos.x - intervalPos &&
+            _nowpos.x < beforePos.x + intervalPos &&
+            _nowpos.z > beforePos.z - intervalPos &&
+            _nowpos.z < beforePos.z + intervalPos)
+        {
+            //Debug.Log("壁際");
+            stopCount++;
+        }
+        else
+        {
+            beforePos = _nowpos;
+            stopCount = 0;
+        }
+    }
+
+    // 壁際での反転処理（判断も）
+    private void turnStopWall()
+    {
+        if (stopCount < intervalFlame)
+        {
+            //Debug.Log("反転できなかった！");
+            return;
+        }
+        Vector3 _tecVec;
+        _tecVec = this.transform.position - frontVec;
+        _tecVec.y = vecFront_Height;
+        transform.GetChild(2).gameObject.transform.position = this.transform.position + _tecVec.normalized * intervalSize * 50;
+
+        calcFrontVec();
+        //Debug.Log("反転(はち)");
     }
 }
