@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseControl : MonoBehaviour {
+
     //パッド
     public GamePad game_pad = null;
     //pause画面
@@ -61,6 +63,10 @@ public class pauseControl : MonoBehaviour {
                 FadeManager.FadeOut(0);
                 pause_mode_flg = false;
             }
+            if (2 == cursor_pos_num) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
         }
     }
 }

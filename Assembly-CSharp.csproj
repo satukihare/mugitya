@@ -76,13 +76,16 @@
     <Compile Include="Assets\fireWall\script\ControlFireWall.cs" />
     <Compile Include="Assets\fireWall\script\fire_obj_child.cs" />
     <Compile Include="Assets\GameMnger\script\gameMnger.cs" />
-    <Compile Include="Assets\GUI\BugCount.cs" />
+    <Compile Include="Assets\GUI\script\back_light_img_script.cs" />
+    <Compile Include="Assets\GUI\script\BugCount.cs" />
     <Compile Include="Assets\GUI\script\cursorMove.cs" />
     <Compile Include="Assets\GUI\script\double_speed_script.cs" />
     <Compile Include="Assets\GUI\script\NumRender.cs" />
     <Compile Include="Assets\GUI\script\pauseControl.cs" />
     <Compile Include="Assets\GUI\script\totalScore.cs" />
     <Compile Include="Assets\GUI\script\TrapNumRender.cs" />
+    <Compile Include="Assets\GUI\script\TrapUIIconMnger.cs" />
+    <Compile Include="Assets\GUI\script\TrapUIImageControl.cs" />
     <Compile Include="Assets\Player\PlaySE.cs" />
     <Compile Include="Assets\Player\script\ChangeItem.cs" />
     <Compile Include="Assets\Player\script\Flower_AI.cs" />

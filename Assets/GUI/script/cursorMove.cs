@@ -13,13 +13,16 @@ public class cursorMove : MonoBehaviour {
     //メニュー最大数
     private const int min_menu_num = 0;
     //メニュー最小数
-    private const int max_menu_num = 1;
+    private const int max_menu_num = 2;
 
     //ゲームパッド移動フラグ
     private bool pad_move_flg = false;
 
     //cursor移動量
     public float cursor_move_num = 30.0f;
+
+    //Y軸位置調整
+    public float y_axis_adjustment = 150;
 
     // Start is called before the first frame update
     void Start() {
@@ -66,6 +69,10 @@ public class cursorMove : MonoBehaviour {
         Vector2 now_position = transform.position;
         //目的のUI
         Vector2 go_to_position = img_obj[cursor_position_num].transform.position;
+        //float height = img_obj[cursor_position_num].GetComponent<RectTransform>().sizeDelta.y;
+        //
+        ////位置調整
+        //go_to_position.y += height / y_axis_adjustment;
         //移動量
         Vector2 movement = new Vector2(0.0f, 0.0f);
 
