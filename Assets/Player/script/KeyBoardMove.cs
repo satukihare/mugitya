@@ -65,27 +65,18 @@ public class KeyBoardMove : MonoBehaviour
         //ゲーム進行速度変更
         if (Input.GetKeyDown(KeyCode.J))
         {
-            switch(SpeedMagnification)
+            switch(Time.timeScale)
             {
-                case false:
-                    SpeedMagnification = true;
+                case 1:
+                    Time.timeScale = 2f;
+                    Debug.Log(Time.timeScale);
                     break;
-                case true:
-                    SpeedMagnification = false;
+                case 2:
+                    Time.timeScale = 1f;
+                    Debug.Log(Time.timeScale);
                     break;
             }
-            //Debug.Log(SpeedMagnification);
         }
-        if (SpeedMagnification == false)
-        {
-            Time.timeScale = 1f;
-        }
-        if (SpeedMagnification == true)
-        {
-            Time.timeScale = 2f;
-        }
-
-
 
 
     }

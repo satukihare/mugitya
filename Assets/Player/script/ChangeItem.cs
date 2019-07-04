@@ -11,6 +11,8 @@ public class ChangeItem : MonoBehaviour
     private gameMnger gameManager;
     int Max_Wind;
     int Max_Fire;
+    private Transform HandObj;
+    private Transform Hand_PunchObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class ChangeItem : MonoBehaviour
         equipment = 0;
         FireObj = this.transform.Find("bonfireItem");
         WindObj = this.transform.Find("WindItem");
+        HandObj = this.transform.Find("Hand");
+        Hand_PunchObj = this.transform.Find("Hand_Punch");
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
         if (currentSceneindex == 1)//チュートリアルステージのアイテム数設定
         {
@@ -79,16 +83,22 @@ public class ChangeItem : MonoBehaviour
         {
             FireObj.gameObject.SetActive(false);
             WindObj.gameObject.SetActive(false);
+            HandObj.gameObject.SetActive(true);
+            Hand_PunchObj.gameObject.SetActive(false);
         }
         if (equipment == 1)
         {
             FireObj.gameObject.SetActive(true);
             WindObj.gameObject.SetActive(false);
+            HandObj.gameObject.SetActive(false);
+            Hand_PunchObj.gameObject.SetActive(true);
         }
         if (equipment == 2)
         {
             FireObj.gameObject.SetActive(false);
             WindObj.gameObject.SetActive(true);
+            HandObj.gameObject.SetActive(false);
+            Hand_PunchObj.gameObject.SetActive(true);
             WindObj.GetComponentInChildren<Wind>().enabled = false;
         }
     }

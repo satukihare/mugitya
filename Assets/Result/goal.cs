@@ -41,7 +41,7 @@ public class goal : MonoBehaviour
     void Update()
     {
         int Total_Bug = bugCountScript.totalBug;
-        Debug.Log(Total_Bug);
+        //Debug.Log(Total_Bug);
         if (Total_Bug<=0 && Is_ResultOn==false)
         {
             Is_ResultOn = true;
