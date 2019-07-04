@@ -10,6 +10,9 @@ public class gameMnger : MonoBehaviour {
     //ゴールした虫の管理
     IDictionary<string, int> goal_bug_dictionary = new Dictionary<string, int>();
 
+    //現在のゲームスピードを保存
+    float game_speed = 1.0f;
+
     // Start is called before the first frame update
     void Start() {
         //虫のデータマップに予めタグと値をセット
@@ -121,5 +124,15 @@ public class gameMnger : MonoBehaviour {
             goal_bug_dictionary.Add(set_add_tag, set_start_date);
         else
             goal_bug_dictionary[set_add_tag] = set_start_date;
+    }
+
+    //ゲームスピードをセット
+    public void setGameSpeed(float set_game_speed) {
+        game_speed = set_game_speed;
+    }
+
+    //ゲームスピードを渡す
+    public float getGameSpeed() {
+        return game_speed;
     }
 }

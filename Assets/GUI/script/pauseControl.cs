@@ -15,6 +15,11 @@ public class pauseControl : MonoBehaviour {
 
     public cursorMove cursor = null;
 
+    [SerializeField] gameMnger game_mnger;
+
+    //ポーズ以前のゲームスピード
+    float before_speed = 0.0f;
+
     // Start is called before the first frame update
     void Start() {
     }
@@ -30,11 +35,13 @@ public class pauseControl : MonoBehaviour {
 
         //pauseなら停止させる
         if (pause_mode_flg) {
-            Time.timeScale = 0.0f;
+            //以前のゲームスピードを保存
+            before_speed = game_mnger.getGameSpeed();
+            game_mnger.setGameSpeed(0.0f);
             pouse_ui.SetActive(true);
         }
         else if (!pause_mode_flg) {
-            Time.timeScale = 1.0f;
+            game_mnger.setGameSpeed(before_speed);
             pouse_ui.SetActive(false);
         }
     }
@@ -59,7 +66,7 @@ public class pauseControl : MonoBehaviour {
                 pause_mode_flg = false;
             }
             if (1 == cursor_pos_num) {
-                Time.timeScale = 1f;
+                game_mnger.setGameSpeed(before_speed);
                 FadeManager.FadeOut(0);
                 pause_mode_flg = false;
             }

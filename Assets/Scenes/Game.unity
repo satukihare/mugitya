@@ -6884,6 +6884,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.3290863
       objectReference: {fileID: 0}
+    - target: {fileID: 6362010267578417965, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: game_mnger
+      value: 
+      objectReference: {fileID: 402902136}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6aa122307404ae488e81edddf162571, type: 3}
 --- !u!1001 &1940273238
@@ -8031,6 +8036,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8795381416929758813, guid: 9eb0552bfa2f52648b3e458829883d0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8084,21 +8104,6 @@ PrefabInstance:
     - target: {fileID: 8795381416929758813, guid: 9eb0552bfa2f52648b3e458829883d0a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
