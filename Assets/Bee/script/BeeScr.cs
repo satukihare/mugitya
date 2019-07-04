@@ -115,6 +115,19 @@ public class BeeScr : MonoBehaviour
         calcFrontVec();
     }
 
+    //ゴールに行く
+    private void FindGoal()
+    {
+        Vector3 _vec = erea.getHitPos();
+        Vector3 _tecVec;
+        _vec = _vec - this.transform.position;
+        _tecVec.x = _vec.x; _tecVec.y = 0; _tecVec.z = _vec.z;
+
+        transform.GetChild(1).gameObject.transform.position = this.transform.position + _tecVec.normalized * intervalSize * 50;
+
+        calcFrontVec();
+    }
+
     private void calcFrontVec()
     {
         frontVec = point.transform.position - this.transform.position;

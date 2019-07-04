@@ -38,23 +38,6 @@ public class Flower_AI : MonoBehaviour
 
     void Update()
     {
-        //子の情報から前ベクトル修正
-        //calcFrontVec();
-        //前ベクトルから進方向を修正
-        updateChildPos();
-
-        //子からエリアにオブジェクトがあるか捜索
-        //bEreaIn = erea.getInErea();
-
-        //状態遷移
-        //if (erea.getEreaEnable)
-        //{//範囲内
-        //    InErea();
-        //}
-        //else
-        //{
-        //    agent.speed = moveSpeed;
-        //}
         if(erea.getEreaEnable())
         {
             InErea();
@@ -70,7 +53,6 @@ public class Flower_AI : MonoBehaviour
 
         //前ベクトルの位置更新
         agent.destination = point.position;
-
     }
 
 

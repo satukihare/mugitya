@@ -119,6 +119,7 @@ MonoBehaviour:
   nameStr:
   - wind
   - fire
+  - goalArea
 --- !u!114 &6301644564521093447
 MonoBehaviour:
   m_ObjectHideFlags: 0
