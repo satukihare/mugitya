@@ -109,7 +109,6 @@
     <Compile Include="Assets\system\BillBoard.cs" />
     <Compile Include="Assets\system\GamePad.cs" />
     <Compile Include="Assets\system\HitFire.cs" />
-    <Compile Include="Assets\system\SkyBox\RotatingTheSun.cs" />
     <Compile Include="Assets\Wasp\script\wasp.cs" />
     <None Include="Assets\displayEffectLayer\Translucent.shader" />
     <Reference Include="Unity.Timeline.Editor">
