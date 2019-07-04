@@ -34,7 +34,7 @@ public class BugCount : MonoBehaviour
         gameManager.setBugNums("bee", Check("bee") - 1);
         gameManager.setBugNums("spider", Check("spider") - 1);
         gameManager.setBugNums("locust", Check("locust") - 1);
-        Debug.Log(totalBug);
+        //Debug.Log(totalBug);
 
     }
 
