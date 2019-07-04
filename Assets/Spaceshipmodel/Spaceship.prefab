@@ -1603,7 +1603,7 @@ Transform:
   m_GameObject: {fileID: 8850822771387185826}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -28.2, y: 5.33, z: 45.3}
-  m_LocalScale: {x: 200, y: 200, z: 200}
+  m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children:
   - {fileID: 4725969473255509386}
   - {fileID: 57773405489795305}
@@ -1634,7 +1634,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.07
+  m_Radius: 0.08
   m_Height: 0.2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -1668,5 +1668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseUIPrefab: {fileID: 6312315037269746484, guid: 9fc8d178657877f4c9fcf6e14f6977b2,
     type: 3}
+  game_mnger: {fileID: 0}
   goal_insect_num: 0000000000000000000000000000000000000000
   Is_ResultOn: 0
