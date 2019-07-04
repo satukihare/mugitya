@@ -110,6 +110,19 @@ public class AntScr : MonoBehaviour
         calcFrontVec();
     }
 
+    //ゴールエリアに侵入
+    private void findArea()
+    {
+        Vector3 _vec = erea.getHitPos();
+        Vector3 _tecVec;
+        _vec = _vec - this.transform.position;
+        _tecVec.x = _vec.x; _tecVec.y = vecFront_Height; _tecVec.z = _vec.z;
+
+        transform.GetChild(2).gameObject.transform.position = this.transform.position + _tecVec.normalized * intervalSize * 50;
+
+        calcFrontVec();
+    }
+
     private void calcFrontVec()
     {
         frontVec = point.transform.position - this.transform.position;
