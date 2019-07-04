@@ -563,7 +563,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef4195aae6860f4bae211a1743ca3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameStr: []
+  nameStr:
+  - fire
+  - bee
+  - goalArea
 --- !u!114 &223156378282302688
 MonoBehaviour:
   m_ObjectHideFlags: 0

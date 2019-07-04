@@ -458,6 +458,7 @@ MonoBehaviour:
   nameStr:
   - fire
   - spider
+  - goalArea
 --- !u!114 &612063873571399948
 MonoBehaviour:
   m_ObjectHideFlags: 0
