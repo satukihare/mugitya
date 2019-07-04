@@ -5174,6 +5174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 8811920745931194184}
   intervalSize: 0.2
+  intervalPos: 0.2
+  intervalFlame: 60
 --- !u!114 &2690037963953725808
 MonoBehaviour:
   m_ObjectHideFlags: 0
