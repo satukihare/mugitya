@@ -1219,6 +1219,7 @@ MonoBehaviour:
   game_pad: {fileID: 1540032474902909517}
   pouse_ui: {fileID: 6362010268708319412}
   cursor: {fileID: 1223708482867828774}
+  game_mnger: {fileID: 0}
 --- !u!114 &1540032474902909517
 MonoBehaviour:
   m_ObjectHideFlags: 0

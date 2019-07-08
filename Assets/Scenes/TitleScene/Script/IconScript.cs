@@ -11,6 +11,9 @@ public class IconScript : MonoBehaviour
     float x;            //IconのX座標
     float y;            //IconのY座標
     bool b;             //移動回数の制御用
+
+    [SerializeField] gameMnger game_mnger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +59,9 @@ public class IconScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
             {
-                FadeManager.FadeOut(1);  
+
+                gameMnger.setNextSceneNumber(1);
+                FadeManager.FadeOut(1);
             }
         }
         if (IconPos == 1)
