@@ -1246,7 +1246,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ae65cadf67139df45bb031825c311641, type: 3}
+      objectReference: {fileID: 8300000, guid: 143fd219ff460f44d98fc66bc3695fd2, type: 3}
     - target: {fileID: 3860613200796720302, guid: 09acc3c75aa42b7469ba9bd75166b14d,
         type: 3}
       propertyPath: m_Enabled
@@ -3834,11 +3834,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2767017757198434857, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.7999878
-      objectReference: {fileID: 0}
     - target: {fileID: 6362010267578417965, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: GamePad
@@ -3859,16 +3854,6 @@ PrefabInstance:
       propertyPath: game_mnger
       value: 
       objectReference: {fileID: 1276034233}
-    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: game_pad
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: cursor_move_num
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6362010267520235213, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: game_mnger
@@ -3879,6 +3864,21 @@ PrefabInstance:
       propertyPath: game_mnger
       value: 
       objectReference: {fileID: 1276034233}
+    - target: {fileID: 2767017757198434857, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.7999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: game_pad
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223708482867828774, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: cursor_move_num
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1540032474902909517, guid: e6aa122307404ae488e81edddf162571, type: 3}
     - {fileID: 1378198149948749636, guid: e6aa122307404ae488e81edddf162571, type: 3}

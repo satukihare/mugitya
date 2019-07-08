@@ -271,7 +271,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ae65cadf67139df45bb031825c311641, type: 3}
+      objectReference: {fileID: 8300000, guid: 143fd219ff460f44d98fc66bc3695fd2, type: 3}
     - target: {fileID: 3860613200796720302, guid: 09acc3c75aa42b7469ba9bd75166b14d,
         type: 3}
       propertyPath: m_Enabled
@@ -1228,11 +1228,6 @@ PrefabInstance:
       propertyPath: game_mnger
       value: 
       objectReference: {fileID: 487711189}
-    - target: {fileID: 8912769340154414078, guid: e6aa122307404ae488e81edddf162571,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.4619141
-      objectReference: {fileID: 0}
     - target: {fileID: 6362010267520235213, guid: e6aa122307404ae488e81edddf162571,
         type: 3}
       propertyPath: game_mnger
@@ -1243,6 +1238,11 @@ PrefabInstance:
       propertyPath: game_mnger
       value: 
       objectReference: {fileID: 487711189}
+    - target: {fileID: 8912769340154414078, guid: e6aa122307404ae488e81edddf162571,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.4619141
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6aa122307404ae488e81edddf162571, type: 3}
 --- !u!1001 &139663867
@@ -6981,11 +6981,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 229.3
       objectReference: {fileID: 0}
-    - target: {fileID: 19559889049412136, guid: 5c6d4b0081b50ef43a001706feb4e2cb,
-        type: 3}
-      propertyPath: game_mnger
-      value: 
-      objectReference: {fileID: 487711189}
     - target: {fileID: 4961120358626821419, guid: 5c6d4b0081b50ef43a001706feb4e2cb,
         type: 3}
       propertyPath: m_Name
@@ -7066,6 +7061,11 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0.07
       objectReference: {fileID: 0}
+    - target: {fileID: 19559889049412136, guid: 5c6d4b0081b50ef43a001706feb4e2cb,
+        type: 3}
+      propertyPath: game_mnger
+      value: 
+      objectReference: {fileID: 487711189}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6d4b0081b50ef43a001706feb4e2cb, type: 3}
 --- !u!4 &1379819274 stripped
