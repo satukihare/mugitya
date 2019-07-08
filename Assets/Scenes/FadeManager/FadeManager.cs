@@ -62,7 +62,7 @@ public class FadeManager:MonoBehaviour{
         fadeCanvas.enabled = true;
         isFadeOut = true;
 
-
+        //ローディング画面からどの画面へ遷移するかを決める
         gameMnger.setNextSceneNumber(n);
     }
 

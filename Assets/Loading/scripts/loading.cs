@@ -19,7 +19,6 @@ public class loading : MonoBehaviour {
     }
 
     IEnumerator LoadScene() {
-        //async = SceneManager.LoadSceneAsync("NextScene");
         async = SceneManager.LoadSceneAsync(gameMnger.getNextSceneNumber());
 
         while (!async.isDone) {
