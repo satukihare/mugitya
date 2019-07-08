@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class gameMnger : MonoBehaviour {
+    //Loadingで次にどのシーンに遷移するのかを指定する
+    [SerializeField] static int next_scene_num = 0;
+
     //虫のデータマップ
     IDictionary<string, int> bug_nums_map = new Dictionary<string, int>();
     //設置物のデータマップ
@@ -135,4 +138,15 @@ public class gameMnger : MonoBehaviour {
     public float getGameSpeed() {
         return game_speed;
     }
+
+    //次のシーンの数値を渡す
+    public static int getNextSceneNumber() {
+        return next_scene_num;
+    }
+
+    //次のシーンをセットする
+    public static void setNextSceneNumber(int set_next_scene_num) {
+        next_scene_num = set_next_scene_num;
+    }
+
 }

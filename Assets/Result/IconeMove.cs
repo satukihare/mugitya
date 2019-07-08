@@ -12,7 +12,6 @@ public class IconeMove : MonoBehaviour
     float y;            //IconのY座標
     public bool b;      //移動回数の制御用
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -62,11 +61,13 @@ public class IconeMove : MonoBehaviour
                 Time.timeScale = 1f;
                 if (currentSceneindex > 4)
                 {
-                    FadeManager.FadeOut(0);
+                    gameMnger.setNextSceneNumber(currentSceneindex);
+                    FadeManager.FadeOut(5);
                 }
                 else
                 {
-                    FadeManager.FadeOut(currentSceneindex);//現在のシーン番号を取得＋１(次のステージにFade)
+                    gameMnger.setNextSceneNumber(currentSceneindex);
+                    FadeManager.FadeOut(5);//現在のシーン番号を取得＋１(次のステージにFade)
                 }
             }
         }
@@ -76,7 +77,8 @@ public class IconeMove : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("B"))
             {
                 Time.timeScale = 1f;
-                FadeManager.FadeOut(0);
+                gameMnger.setNextSceneNumber(currentSceneindex);
+                FadeManager.FadeOut(5);
             }
         }
     }

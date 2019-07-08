@@ -57,10 +57,13 @@ public class FadeManager:MonoBehaviour{
     public static void FadeOut(int n)
     {
         if (fadeImage == null) Init();
-        nextScene = n;
+        nextScene = 5;
         fadeImage.color = Color.clear;
         fadeCanvas.enabled = true;
         isFadeOut = true;
+
+
+        gameMnger.setNextSceneNumber(n);
     }
 
     public void Update()
@@ -94,7 +97,7 @@ public class FadeManager:MonoBehaviour{
                 alpha = 1.0f;
 
                 //次のシーンへ遷移
-                SceneManager.LoadScene(nextScene);
+                SceneManager.LoadScene(5);
             }
 
             //フェード用Imageの透明度設定
