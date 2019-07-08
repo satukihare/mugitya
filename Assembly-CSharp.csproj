@@ -83,6 +83,8 @@
     <Compile Include="Assets\GUI\script\TrapNumRender.cs" />
     <Compile Include="Assets\GUI\script\TrapUIIconMnger.cs" />
     <Compile Include="Assets\GUI\script\TrapUIImageControl.cs" />
+    <Compile Include="Assets\Loading\scripts\loading.cs" />
+    <Compile Include="Assets\Loading\scripts\loadingFlower.cs" />
     <Compile Include="Assets\Player\PlaySE.cs" />
     <Compile Include="Assets\Player\script\ChangeItem.cs" />
     <Compile Include="Assets\Player\script\Flower_AI.cs" />
