@@ -1587,7 +1587,6 @@ GameObject:
   - component: {fileID: 922578538540809947}
   - component: {fileID: 3030633336342775306}
   - component: {fileID: 19559889049412136}
-  - component: {fileID: 4837720493208976244}
   - component: {fileID: 6661669149158803278}
   m_Layer: 0
   m_Name: Spaceship
@@ -1673,25 +1672,6 @@ MonoBehaviour:
   game_mnger: {fileID: 0}
   goal_insect_num: 0000000000000000000000000000000000000000
   Is_ResultOn: 0
---- !u!95 &4837720493208976244
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850822771387185826}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!111 &6661669149158803278
 Animation:
   m_ObjectHideFlags: 0
