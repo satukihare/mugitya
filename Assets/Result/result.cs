@@ -19,7 +19,7 @@ public class result : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if (Input.GetKeyDown(KeyCode.H))
         {
             if (pauseUIInstance == null)
@@ -29,5 +29,6 @@ public class result : MonoBehaviour
                 Time.timeScale = 0f;
             }
         }
+        */
     }
 }
