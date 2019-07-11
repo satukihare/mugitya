@@ -18,7 +18,7 @@ public class cameramove : MonoBehaviour
     //　ポーズUIのインスタンス
     private GameObject pauseUIInstance;
     public bool Is_ResultOn;
-
+    float MoveSpeed = 0.03f;
     void Start()
     {
         FadeManager.FadeIn();
@@ -36,22 +36,31 @@ public class cameramove : MonoBehaviour
         Is_ResultOn = false;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        if (Mathf.Approximately(Time.timeScale, 0f))
+        if (Time.timeScale == 1f)
         {
-            return;
+            MoveSpeed = 0.05f;
         }
+        if (Time.timeScale == 2f)
+        {
+            MoveSpeed = 0.2f;
+        }
+        Debug.Log(MoveSpeed);
 
         transform.rotation = hRotation * vRotation;
 
         // カメラの位置(transform.position)の更新
         // player位置から距離distanceだけ手前に引いた位置を設定します(位置補正版)
         //transform.position = player.position + new Vector3(0, 5, 0) - transform.rotation * Vector3.forward * distance;
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + 0.03f);
+        if(Time.timeScale !=0f)
+        {
+            transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + (MoveSpeed));
+        }
+        
 
 
-        if(this.transform.position.z>=GameObject.Find("Spaceship").transform.position.z-30 && Is_ResultOn == false)
+        if (this.transform.position.z >= GameObject.Find("Spaceship").transform.position.z - 30 && Is_ResultOn == false)
         {
             Is_ResultOn = true;
             pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
@@ -60,3 +69,28 @@ public class cameramove : MonoBehaviour
         }
     }
 }
+
+    //void LateUpdate()
+    //{
+    //    if (Mathf.Approximately(Time.timeScale, 0f))
+    //    {
+    //        return;
+    //    }
+    //
+    //    transform.rotation = hRotation * vRotation;
+    //
+    //    // カメラの位置(transform.position)の更新
+    //    // player位置から距離distanceだけ手前に引いた位置を設定します(位置補正版)
+    //    //transform.position = player.position + new Vector3(0, 5, 0) - transform.rotation * Vector3.forward * distance;
+    //    transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z + (MoveSpeed));
+    //
+    //
+    //    if(this.transform.position.z>=GameObject.Find("Spaceship").transform.position.z-30 && Is_ResultOn == false)
+    //    {
+    //        Is_ResultOn = true;
+    //        pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
+    //        GameObject.Find("gameUI").SetActive(false);
+    //        Time.timeScale = 0f;
+    //    }
+    //}
+//}

@@ -52,6 +52,7 @@ public class pauseControl : MonoBehaviour {
         //ポーズボタン判定が押されたたら止まる
         if (game_pad.GetMenuButton() || Input.GetKeyDown(KeyCode.Escape)) {
             pause_mode_flg = true;
+            Time.timeScale = 0f;
         }
     }
 
@@ -64,6 +65,7 @@ public class pauseControl : MonoBehaviour {
 
             if (0 == cursor_pos_num) {
                 pause_mode_flg = false;
+                Time.timeScale = 1f;
             }
             if (1 == cursor_pos_num) {
                 game_mnger.setGameSpeed(before_speed);
@@ -71,7 +73,9 @@ public class pauseControl : MonoBehaviour {
                 pause_mode_flg = false;
             }
             if (2 == cursor_pos_num) {
+                Time.timeScale = 1f;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                
             }
 
         }
