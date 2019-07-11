@@ -18,6 +18,12 @@ public class double_speed_script : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        float time = Time.timeScale;
+        if ((int)time == (int)1) target_speed_num = 1;
+        if ((int)time == (int)2) target_speed_num = 2;
+        if ((int)time == (int)3) target_speed_num = 3;
+
         Image image_component = this.GetComponent<Image>();
         
 

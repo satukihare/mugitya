@@ -11,6 +11,10 @@ public class IconeMove : MonoBehaviour {
     float y;            //IconのY座標
     public bool b;      //移動回数の制御用
 
+    [SerializeField] GameObject next_img;
+    [SerializeField] GameObject title_img;
+
+    [SerializeField] float btn_num = 150;
 
     // Start is called before the first frame update
     void Start() {
@@ -41,8 +45,8 @@ public class IconeMove : MonoBehaviour {
             b = true;
         }
 
-        if (IconPos == 0) { rect.localPosition = new Vector3(150, -60, 0); }
-        if (IconPos == 1) { rect.localPosition = new Vector3(150, -220, 0); }
+        if (IconPos == 0) { /*rect.localPosition*/this.transform.position = new Vector3(next_img.transform.position.x - btn_num, next_img.transform.position.y ,0.0f ); }
+        if (IconPos == 1) { /*rect.localPosition*/this.transform.position = new Vector3(next_img.transform.position.x - btn_num, title_img.transform.position.y,0.0f ); }
 
         int currentSceneindex = SceneManager.GetActiveScene().buildIndex + 1;//現在のシーン番号を取得
 
