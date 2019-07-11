@@ -68,6 +68,7 @@ public class pauseControl : MonoBehaviour {
                 Time.timeScale = 1f;
             }
             if (1 == cursor_pos_num) {
+                Time.timeScale = 1f;
                 game_mnger.setGameSpeed(before_speed);
                 FadeManager.FadeOut(0);
                 pause_mode_flg = false;
