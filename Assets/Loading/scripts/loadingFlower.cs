@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class loadingFlower : MonoBehaviour
-{
+public class loadingFlower : MonoBehaviour {
 
-    float angele_num = 0;
+    [SerializeField] float angele_num = 0.1f;
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        angele_num += 0.1f;
+    void Update() {
+        angele_num += angele_num;
         transform.Rotate(new Vector3(0, 0, angele_num));
     }
 }
