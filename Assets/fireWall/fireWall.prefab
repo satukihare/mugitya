@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  fire_obj: {fileID: 0}
+  fire_obj: {fileID: 1907280998412988, guid: 728c3e0cbd39fd946b9c989504c39c87, type: 3}
   wall_nums: 300
   wall_height: 3
+  wall_z_move: 10
