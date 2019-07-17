@@ -12,7 +12,12 @@ public class loadingFlower : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        angele_num += angele_num;
-        transform.Rotate(new Vector3(0, 0, angele_num));
+        angele_num += 0.1f;
+
+        Vector3 axis = new Vector3(0f, 0f, 1f); // 回転軸
+        float angle = 90f * Time.deltaTime; // 回転の角度
+        Quaternion q = Quaternion.AngleAxis(angle, axis);
+
+        transform.rotation = q * this.transform.rotation;//new Quaternion(angele_num, 0f, 0f, 0f);
     }
 }

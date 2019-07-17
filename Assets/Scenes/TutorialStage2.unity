@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43683007, g: 0.4844696, b: 0.5647221, a: 1}
+  m_IndirectSpecularColor: {r: 0.43683004, g: 0.4844696, b: 0.564722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1966,11 +1966,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 750488606}
     m_Modifications:
-    - target: {fileID: 6091876493350021363, guid: 252bf5c4e6633b044a78775c10286dd6,
-        type: 3}
-      propertyPath: m_Name
-      value: Wind (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6091876493350021358, guid: 252bf5c4e6633b044a78775c10286dd6,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2015,6 +2010,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091876493350021363, guid: 252bf5c4e6633b044a78775c10286dd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Wind (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6091876493350021362, guid: 252bf5c4e6633b044a78775c10286dd6,
         type: 3}
@@ -3116,11 +3116,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 750488606}
     m_Modifications:
-    - target: {fileID: 6091876493350021363, guid: 252bf5c4e6633b044a78775c10286dd6,
-        type: 3}
-      propertyPath: m_Name
-      value: Wind (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6091876493350021358, guid: 252bf5c4e6633b044a78775c10286dd6,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3165,6 +3160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091876493350021363, guid: 252bf5c4e6633b044a78775c10286dd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Wind (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6091876493350021362, guid: 252bf5c4e6633b044a78775c10286dd6,
         type: 3}
@@ -3584,6 +3584,21 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 2.5350226e-38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 1.4e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795381415173159470, guid: 9eb0552bfa2f52648b3e458829883d0a,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 2.3510647e-38
+      objectReference: {fileID: 0}
     - target: {fileID: 8795381416929758813, guid: 9eb0552bfa2f52648b3e458829883d0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3853,5 +3868,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 19559889049412136, guid: 5c6d4b0081b50ef43a001706feb4e2cb,
+        type: 3}
+      propertyPath: game_mnger
+      value: 
+      objectReference: {fileID: 1196090394}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6d4b0081b50ef43a001706feb4e2cb, type: 3}
